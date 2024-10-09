@@ -55,41 +55,27 @@ It must be automatically generated.
 
 ## Custom configuration
 
-Create a file named `custom-configuration.nix` in the flake directory.
+Edit the file named `custom-configuration.nix` in the flake directory.
+This file is already defining some basic configurations.
 
-```sh
-cd [path_of_the_flake_folder]
-touch custom-configuration.nix
-```
+Replace the following placeholders in the appropriate files:
 
-You need to add some basic configurations to the `custom-configuration.nix` file.
-Set the content of the file as the snippet below.
-Remember to replace:
-
-- `[hostname]` with your hostname;
+- `[Full Name]` with your full name.
 - `[username]` with your username;
-- `[Your Name]` with your full name.
+- `[hostname]` with your hostname;
+
+Since most of the places where they appear are in the form of variables, you only need to replace their definitions.
 
 ```nix
-{ pkgs, lib, inputs, ... }:
-{
-  # Define a user account.
-  users.users.[username] = {
-    isNormalUser = true;
-    description = "[Your Name]";
-    extraGroups = [ "networkmanager" "wheel" "bluetooth" ];
-    packages = with pkgs; [
-      #  thunderbird
-    ];
-  };
+# custom-configuration.nix
+let
+  fullname = "[Full Name]";
+  username = "[username]";
+  hostname = "[hostname]";
 
-  # Enable automatic login for the user.
-  services.displayManager.autoLogin.enable = true;
-  services.displayManager.autoLogin.user = "[username]";
-
-  ## Networking
-  networking.hostName = "[hostname]"; # Define your hostname.
-}
+# home.nix
+let
+  username = "[username]";
 ```
 
 Feel free to add any other configuration you want to the `custom-configuration.nix` file.
@@ -104,8 +90,19 @@ Then, you can build the system with:
 sudo nix flake update
 ```
 
-And rebuild the system with:
+### NixOS
+
+Rebuild the system with:
 
 ```sh
 sudo nixos-rebuild switch --flake .#impure
+```
+
+### Home Manager
+
+Rebuild the user environment with the following commands:
+
+```sh
+nix-shell '<home-manager>' -A install
+home-manager switch --flake .#impure
 ```

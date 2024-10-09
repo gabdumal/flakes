@@ -13,20 +13,18 @@
     usbutils
     vscode.fhs
     zed-editor
-    gnome-podcasts
   ];
 
   programs.firefox.enable = true;
+
   programs.zsh = {
     enable = true;
     enableCompletion = true;
-    autosuggestions.enable = true;
     syntaxHighlighting.enable = true;
-    ohMyZsh = {
-      enable = true;
-      plugins = [ "git" ];
-      theme = "robbyrussell";
-    };
   };
+
+  fonts.packages = with pkgs; [
+    (nerdfonts.override { fonts = [ "Meslo" ]; })
+  ];
 
 }

@@ -11,6 +11,7 @@
       lib = nixpkgs.lib;
     in
     {
+
       nixosConfigurations = {
         pure = lib.nixosSystem {
           system = "x86_64-linux";
@@ -19,6 +20,7 @@
           ];
         };
       };
+
     };
 
 }
