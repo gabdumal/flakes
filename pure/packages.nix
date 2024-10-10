@@ -10,6 +10,7 @@
     neovim
     nil
     nixpkgs-fmt
+    nodePackages.pnpm
     usbutils
     zed-editor
   ];

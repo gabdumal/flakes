@@ -48,6 +48,7 @@
             inherit username;
           };
           modules = [
+            "${pure}/home.nix"
             ./home.nix
             ./custom-home.nix
           ];

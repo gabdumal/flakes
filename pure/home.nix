@@ -11,11 +11,6 @@
     oh-my-posh
   ];
 
-  programs.vscode = {
-    enable = true;
-    package = pkgs.vscode.fhs;
-  };
-
   programs.zsh = {
     enable = true;
     defaultKeymap = "viins";
@@ -55,6 +50,11 @@
   programs.zoxide = {
     enable = true;
     enableZshIntegration = true;
+  };
+
+  programs.vscode = {
+    enable = true;
+    package = pkgs.vscode.fhs;
   };
 
   fonts = {
