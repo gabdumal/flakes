@@ -98,9 +98,14 @@ sudo nixos-rebuild switch --flake .#impure
 
 ### Home Manager
 
-Rebuild the user environment with the following commands:
+For the first time, you need to initialize home manager with:
 
 ```sh
-nix-shell '<home-manager>' -A install
+nix run home-manager -- init --switch --flake .#impure
+```
+
+Then, you can rebuild the user environment with:
+
+```sh
 home-manager switch --flake .#impure
 ```

@@ -2,6 +2,7 @@
 {
 
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowUnfreePredicate = _: true;
 
   environment.systemPackages = with pkgs; [
     fastfetch
@@ -10,7 +11,6 @@
     nil
     nixpkgs-fmt
     usbutils
-    vscode.fhs
     zed-editor
   ];
 

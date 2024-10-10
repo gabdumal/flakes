@@ -6,10 +6,7 @@
     pure = {
       url = "github:gabdumal/flakes?dir=pure";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
     };
   };
 
@@ -21,7 +18,7 @@
       hostname = "[hostname]";
 
       lib = nixpkgs.lib;
-      pkgs = nixpkgs.legacyPackages.${system};
+      legacyPkgs = nixpkgs.legacyPackages.${system};
     in
     {
 
@@ -30,6 +27,7 @@
           inherit system;
           specialArgs = {
             inherit inputs;
+            inherit system;
             inherit fullname;
             inherit username;
             inherit hostname;
@@ -44,15 +42,12 @@
 
       homeConfigurations = {
         impure = home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
+          pkgs = legacyPkgs;
           extraSpecialArgs = {
             inherit fullname;
             inherit username;
-            inherit lib;
-            inherit pkgs;
           };
           modules = [
-            "${pure}/home.nix"
             ./home.nix
             ./custom-home.nix
           ];
