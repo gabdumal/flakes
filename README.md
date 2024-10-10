@@ -20,6 +20,8 @@ If you are using NixOS, you can add the following to your `configuration.nix`:
 }
 ```
 
+Typically, you can find the `configuration.nix` file at `/etc/nixos/configuration.nix`.
+
 If you are using Nix on another system, you can add the following to your `nix.conf`:
 
 ```nix
@@ -28,11 +30,16 @@ experimental-features = nix-command flakes
 
 ## Installing
 
-Create a new flake using the `impure` template with the following command.
-You can change `./flake` to any other directory name you want.
+Clone this repository to your local machine. You can change the name of the folder `flakes` to whatever you want.
 
 ```sh
-nix flake new --template github:gabdumal/flakes#impure ./flake
+git clone https://github.com/gabdumal/flakes.git flakes
+```
+
+We will make changes only to the `impure` directory.
+
+```sh
+cd flakes/impure
 ```
 
 ## Hardware configuration
@@ -69,7 +76,11 @@ Only change the custom files, named `impure/custom-configuration.nix` and `impur
 
 ## Using
 
-Now, `cd` into the flake directory.
+Now, `cd` into the `impure` flake directory.
+
+```sh
+cd flakes/impure
+```
 
 Then, you can build the system with:
 

@@ -48,6 +48,8 @@
           extraSpecialArgs = {
             inherit fullname;
             inherit username;
+            inherit lib;
+            inherit pkgs;
           };
           modules = [
             "${pure}/home.nix"
