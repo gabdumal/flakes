@@ -37,7 +37,7 @@ nix flake new --template github:gabdumal/flakes#impure ./flake
 
 ## Hardware configuration
 
-You now need to generate your hardware configuration, using the following commands
+You now need to generate your hardware configuration, by using the following commands
 
 ```sh
 cd /etc/nixos
@@ -53,32 +53,19 @@ sudo cp /etc/nixos/hardware-configuration.nix [path_of_the_flake_folder]/hardwar
 Do **not** edit the contents of the `hardware-configuration.nix` file.
 It must be automatically generated.
 
-## Custom configuration
+## Custom definitions
 
-Edit the file named `custom-configuration.nix` in the flake directory.
-This file is already defining some basic configurations.
-
-Replace the following placeholders in the appropriate files:
-
-- `[Full Name]` with your full name.
-- `[username]` with your username;
-- `[hostname]` with your hostname;
-
-Since most of the places where they appear are in the form of variables, you only need to replace their definitions.
+Replace the following placeholders in the `impure/flake.nix` file with the appropriate values:
 
 ```nix
-# custom-configuration.nix
-let
   fullname = "[Full Name]";
   username = "[username]";
   hostname = "[hostname]";
-
-# home.nix
-let
-  username = "[username]";
 ```
 
-Feel free to add any other configuration you want to the `custom-configuration.nix` file.
+Do **not** edit the `impure/flake.nix` file directly, neither the `impure/configuration.nix` and `impure/home.nix` files.
+
+Only change the custom files, named `impure/custom-configuration.nix` and `impure/custom-home.nix`.
 
 ## Using
 

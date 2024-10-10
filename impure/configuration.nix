@@ -1,19 +1,11 @@
-{ pkgs, lib, inputs, ... }:
+{ pkgs, fullname, username, hostname, ... }:
 
-let
-  fullname = "[Full Name]";
-  username = "[username]";
-  hostname = "[hostname]";
-in
 {
 
   imports =
     [
       ./hardware-configuration.nix
     ];
-
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  system.stateVersion = "24.05";
 
   users.defaultUserShell = pkgs.zsh;
 
@@ -22,9 +14,6 @@ in
     isNormalUser = true;
     description = "${fullname}";
     extraGroups = [ "networkmanager" "wheel" "bluetooth" ];
-    packages = with pkgs; [
-      #  thunderbird
-    ];
   };
 
   # Enable automatic login for the user.
