@@ -13,7 +13,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, pure, home-manager, ... } @ inputs:
+  outputs = { self, nixpkgs, home-manager, pure, ... } @ inputs:
     let
       system = "x86_64-linux";
 
@@ -27,7 +27,7 @@
           inherit system;
           specialArgs = { inherit inputs; };
           modules = [
-            "${pure}/config.nix"
+            "${pure}/configuration.nix"
             ./configuration.nix
           ];
         };
@@ -37,10 +37,12 @@
         impure = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           modules = [
+            "${pure}/home.nix"
             ./home.nix
           ];
         };
       };
+
     };
 
 }
