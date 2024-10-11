@@ -21,4 +21,13 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
+  hardware.enableAllFirmware = true;
+  hardware.enableRedistributableFirmware = true;
+
+  hardware.bluetooth =
+    {
+      enable = true;
+      powerOnBoot = true;
+    };
+
 }

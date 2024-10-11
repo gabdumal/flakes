@@ -36,6 +36,20 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
+  # Configure Wayland support.
+  xdg = {
+    portal = {
+      enable = true;
+      extraPortals = with pkgs; [
+        xdg-desktop-portal-wlr
+        xdg-desktop-portal-gtk
+      ];
+    };
+  };
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  security.polkit.enable = true;
+  hardware.opengl.enable = true; # when using QEMU KVM
+
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;

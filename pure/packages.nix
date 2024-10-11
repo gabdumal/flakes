@@ -5,17 +5,17 @@
   nixpkgs.config.allowUnfreePredicate = _: true;
 
   environment.systemPackages = with pkgs; [
+    bluez
+    bluez-tools
     fastfetch
+    (pkgs.wrapFirefox (pkgs.firefox-unwrapped.override { pipewireSupport = true; }) { })
     git
     neovim
     nil
     nixpkgs-fmt
-    nodePackages.pnpm
     usbutils
     zed-editor
   ];
-
-  programs.firefox.enable = true;
 
   programs.zsh = {
     enable = true;
