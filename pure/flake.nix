@@ -34,6 +34,7 @@
         impure = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           modules = [
+            ./shell.nix
             ./home.nix
           ];
         };
