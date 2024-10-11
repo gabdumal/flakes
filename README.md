@@ -31,6 +31,7 @@ experimental-features = nix-command flakes
 ## Installing
 
 Clone this repository to your local machine. You can change the name of the folder `flakes` to whatever you want.
+Personally, I like so set all my flakes in a folder named `.dotfiles` in my home directory.
 
 ```sh
 git clone https://github.com/gabdumal/flakes.git flakes
