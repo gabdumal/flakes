@@ -25,7 +25,9 @@
         pure = lib.nixosSystem {
           inherit system;
           modules = [
-            ./configuration.nix
+            ./system/machine.nix
+            ./system/packages.nix
+            ./system/system.nix
           ];
         };
       };
@@ -34,8 +36,8 @@
         impure = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           modules = [
-            ./shell.nix
-            ./home.nix
+            ./home/shell.nix
+            ./home/home.nix
           ];
         };
       };

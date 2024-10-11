@@ -15,7 +15,7 @@
     nil
     nixpkgs-fmt
     usbutils
-    gnome.gnome-terminal
+    gnome-terminal
   ];
 
   programs = {
