@@ -1,9 +1,16 @@
-{ ... }:
+{ pkgs, ... }:
 {
 
   ## Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+
+  ## Kernel
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
+  ## Hardware configuration
+  hardware.enableAllFirmware = true;
+  hardware.enableRedistributableFirmware = true;
 
   ## Networking.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -20,9 +27,6 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
-
-  hardware.enableAllFirmware = true;
-  hardware.enableRedistributableFirmware = true;
 
   hardware.bluetooth =
     {

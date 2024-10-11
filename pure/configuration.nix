@@ -46,9 +46,9 @@
       ];
     };
   };
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  # environment.sessionVariables.NIXOS_OZONE_WL = "1";
   security.polkit.enable = true;
-  hardware.opengl.enable = true; # when using QEMU KVM
+  hardware.graphics.enable = true; # when using QEMU KVM
 
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
