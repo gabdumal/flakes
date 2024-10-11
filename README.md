@@ -30,17 +30,23 @@ experimental-features = nix-command flakes
 
 ## Installing
 
-Clone this repository to your local machine. You can change the name of the folder `flakes` to whatever you want.
-Personally, I like so set all my flakes in a folder named `.dotfiles` in my home directory.
+Clone this repository to your local machine.
+
+Personally, I like so set all my configuration in a directory named `.dotfiles` in my home directory.
+Then, clone the repository to a folder named after the hostname of the machine I am configuring.
 
 ```sh
-git clone https://github.com/gabdumal/flakes.git flakes
+mkdir ~/.dotfiles
+cd ~/.dotfiles
+git clone https://github.com/gabdumal/flakes.git [hostname]
 ```
 
 We will make changes only to the `impure` directory.
+Enter the folder you just cloned, and then the `impure` directory.
 
 ```sh
-cd flakes/impure
+cd [hostname]
+cd impure
 ```
 
 ## Hardware configuration
@@ -52,10 +58,16 @@ cd /etc/nixos
 sudo nixos-generate-config
 ```
 
-Copy the file `hardware-configuration.nix` to the flake directory.
+Copy the file `hardware-configuration.nix` to the flake directory that you have cloned the repository to.
 
 ```sh
 sudo cp /etc/nixos/hardware-configuration.nix [path_of_the_flake_folder]/hardware-configuration.nix
+```
+
+If you have followed the suggestion to clone the repository to `~/.dotfiles`, the command would be the following, replacing `[hostname]`:
+
+```sh
+sudo cp /etc/nixos/hardware-configuration.nix ~/.dotfiles/[hostname]/impure/hardware-configuration.nix
 ```
 
 Do **not** edit the contents of the `hardware-configuration.nix` file.
@@ -78,14 +90,10 @@ Only change the custom files, named `impure/custom-configuration.nix` and `impur
 ## Using
 
 Now, `cd` into the `impure` flake directory.
-
-```sh
-cd flakes/impure
-```
-
 Then, you can build the system with:
 
 ```sh
+cd impure
 sudo nix flake update
 ```
 

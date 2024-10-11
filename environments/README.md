@@ -30,26 +30,22 @@ experimental-features = nix-command flakes
 
 ## Installing
 
-Clone this repository to your local machine. You can change the name of the folder `flakes` to whatever you want.
-Personally, I like so set all my flakes in a folder named `.dotfiles` in my home directory.
+The installation process is the same as described in the [README.md](../README.md#installing) file.
+
+Now, enter the `environments` directory:
 
 ```sh
-git clone https://github.com/gabdumal/flakes.git flakes
+cd environments
 ```
 
-Now `cd` into the `environments` directory.
-
-```sh
-cd flakes/environments
-```
-
-Choose the environment you want to install and `cd` into it.
+Then, choose the environment you want to install, and enter its directory:
 
 ```sh
 cd [environment]
 ```
 
-Then build the environment.
+For each, you need to construct the `flake.lock` file.
+You can do that by running the following command:
 
 ```sh
 sudo nix flake update
@@ -85,6 +81,26 @@ Also, it uses the same shell that you are using in your terminal.
 If you use the configuration from the [`pure`](../pure/flake.nix) flake in this repository, the `nix-direnv` will be already installed via `home-manager`.
 
 For the first time you enable the environment, you have to `cd` into its folder, and run the following command:
+
+```sh
+direnv allow
+```
+
+#### Configuring projects
+
+If you want to use `nix-direnv` in a project, can create a `.envrc` file in the root of the project with the following content:
+
+```sh
+use flake ./path/to/environment
+```
+
+If you have followed the suggestions in the [README.md](../README.md#installing) file, you can use the following content, replacing `[hostname]` and `[environment]` with the correct values:
+
+```sh
+use flake ~/.dotfiles/[hostname]/environments/[environment]
+```
+
+Then, enable the environment by running, the following command in the root of the project:
 
 ```sh
 direnv allow
