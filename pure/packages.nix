@@ -4,6 +4,10 @@
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnfreePredicate = _: true;
 
+  environment.gnome.excludePackages = with pkgs; [
+    gnome-console
+  ];
+
   environment.systemPackages = with pkgs; [
     bluez
     bluez-tools
@@ -11,6 +15,7 @@
     nil
     nixpkgs-fmt
     usbutils
+    gnome.gnome-terminal
   ];
 
   programs = {
