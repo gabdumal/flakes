@@ -55,8 +55,37 @@ Then build the environment.
 sudo nix flake update
 ```
 
-Now you can enable this environment in your shell by running:
+## Running
+
+After having created the `flake.lock` file, you have two options to execute the environment.
+
+### `nix develop`
+
+This is the most traditional way to run a development environment.
+You have to `cd` into the environment directory and run the following command:
 
 ```sh
 nix develop
+```
+
+The problem with this approach is that the used shell is always `bash`.
+If you want to use another shell, you can use the following command:
+
+```sh
+nix develop --impure --command zsh
+```
+
+### Direnv
+
+You can also use [`nix-direnv`](https://github.com/nix-community/nix-direnv).
+
+This will automatically load the environment when you `cd` into the directory.
+Also, it uses the same shell that you are using in your terminal.
+
+If you use the configuration from the [`pure`](../pure/flake.nix) flake in this repository, the `nix-direnv` will be already installed via `home-manager`.
+
+For the first time you enable the environment, you have to `cd` into its folder, and run the following command:
+
+```sh
+direnv allow
 ```

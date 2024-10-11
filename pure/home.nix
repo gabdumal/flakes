@@ -11,9 +11,17 @@
     webcord
   ];
 
-  programs.vscode = {
-    enable = true;
-    package = pkgs.vscode.fhs;
+  programs = {
+    direnv = {
+      enable = true;
+      enableZshIntegration = true;
+      nix-direnv.enable = true;
+    };
+
+    vscode = {
+      enable = true;
+      package = pkgs.vscode.fhs;
+    };
   };
 
 }

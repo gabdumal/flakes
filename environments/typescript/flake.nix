@@ -23,13 +23,9 @@
               nodePackages.pnpm
               nodePackages.typescript
               nodePackages.typescript-language-server
-              ## Shell
-              zsh
             ] ++ (if system == "aarch64-darwin" then [ ] else [ gdb ]);
 
             shellHook = ''
-              ## Shell
-              exec zsh;
             '';
           };
       });
