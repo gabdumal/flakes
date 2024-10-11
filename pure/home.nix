@@ -9,6 +9,8 @@
 
   home.packages = with pkgs; [
     webcord
+    (pkgs.wrapFirefox (pkgs.firefox-unwrapped.override { pipewireSupport = true; }) { })
+    zed-editor
   ];
 
   programs = {
@@ -21,6 +23,10 @@
     vscode = {
       enable = true;
       package = pkgs.vscode.fhs;
+    };
+
+    neovim = {
+      enable = true;
     };
   };
 

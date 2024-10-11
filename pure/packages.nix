@@ -8,11 +8,9 @@
     bluez
     bluez-tools
     fastfetch
-    (pkgs.wrapFirefox (pkgs.firefox-unwrapped.override { pipewireSupport = true; }) { })
     nil
     nixpkgs-fmt
     usbutils
-    zed-editor
   ];
 
   programs = {
@@ -24,10 +22,6 @@
       enable = true;
       enableCompletion = true;
       syntaxHighlighting.enable = true;
-    };
-
-    neovim = {
-      enable = true;
     };
   };
 
