@@ -33,9 +33,9 @@
             inherit hostname;
           };
           modules = [
-            "${pure}/configuration.nix"
-            ./configuration.nix
-            ./custom-configuration.nix
+            "${pure}/system/system.nix"
+            ./system/system.nix
+            ./system/custom.nix
           ];
         };
       };
@@ -48,10 +48,9 @@
             inherit username;
           };
           modules = [
-            "${pure}/home.nix"
-            "${pure}/shell.nix"
-            ./home.nix
-            ./custom-home.nix
+            "${pure}/home/home.nix"
+            ./home/home.nix
+            ./home/custom.nix
           ];
         };
       };
