@@ -49,6 +49,7 @@
           };
           modules = [
             "${pure}/home.nix"
+            "${pure}/shell.nix"
             ./home.nix
             ./custom-home.nix
           ];
