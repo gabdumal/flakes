@@ -18,14 +18,12 @@
           { }
           {
             packages = with pkgs; [
-            ## Basic
-            git
-            ## Development
-            nodePackages.nodejs
-            nodePackages.pnpm
-            nodePackages.typescript
-            nodePackages.typescript-language-server
-            ] ++ (if system == "aarch64-darwin" then [ ] else [ gdb ]);
+              ## Development
+              nodePackages.nodejs
+              nodePackages.pnpm
+              nodePackages.typescript
+              nodePackages.typescript-language-server
+            ];
 
             shellHook = ''
             '';
