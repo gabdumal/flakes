@@ -24,11 +24,6 @@
       nix-direnv.enable = true;
     };
 
-    vscode = {
-      enable = true;
-      package = pkgs.vscode.fhs;
-    };
-
     neovim = {
       enable = true;
     };
