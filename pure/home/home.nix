@@ -26,7 +26,6 @@ in
 
   home.packages = with pkgs; [
     (pkgs.wrapFirefox (pkgs.firefox-unwrapped.override { pipewireSupport = true; }) { })
-    itch
     webcord
     zed-editor
     ## GNOME
