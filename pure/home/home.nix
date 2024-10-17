@@ -26,7 +26,6 @@ in
 
   home.packages = with pkgs; [
     (pkgs.wrapFirefox (pkgs.firefox-unwrapped.override { pipewireSupport = true; }) { })
-    webcord
     zed-editor
     ## GNOME
     alacarte
@@ -62,6 +61,26 @@ in
     vscode = {
       enable = true;
       mutableExtensionsDir = true;
+    };
+  };
+
+  dconf.settings = {
+    "org/gnome/settings-daemon/plugins/media-keys" = {
+      custom-keybindings = [
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
+      ];
+    };
+
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
+      name = "Terminal";
+      command = "gnome-terminal";
+      binding = "<Ctrl><Alt>t";
+    };
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
+      name = "System Monitor";
+      command = "gnome-system-monitor";
+      binding = "<Ctrl><Shift>Escape";
     };
   };
 
