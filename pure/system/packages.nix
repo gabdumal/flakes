@@ -17,10 +17,12 @@
     bluez
     bluez-tools
     fastfetch
+    gnome-terminal
     nil
     nixpkgs-fmt
+    thefuck
     usbutils
-    gnome-terminal
+    zed-editor
   ];
 
   programs = {
@@ -35,6 +37,7 @@
     };
   };
 
+  ## Allow AppImage files to be run seamlessly
   boot.binfmt.registrations.appimage = {
     wrapInterpreterInShell = false;
     interpreter = "${pkgs.appimage-run}/bin/appimage-run";

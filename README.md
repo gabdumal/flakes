@@ -116,5 +116,5 @@ nix run home-manager -- init --switch --flake .#impure
 Then, you can rebuild the user environment with:
 
 ```sh
-home-manager switch --flake .#impure
+home-manager switch --flake .#impure -b .backup
 ```

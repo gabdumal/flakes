@@ -1,0 +1,25 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "background": "#FF9248",
+          "foreground": "#2d3436",
+          "powerline_symbol": "\ue0b0",
+          "properties": {
+            "folder_icon": " \uf07b ",
+            "home_icon": "\ue617",
+            "style": "powerlevel"
+          },
+          "style": "powerline",
+          "template": " \uf07b\uea9c {{ .Path }} ",
+          "type": "path"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "version": 2
+}
