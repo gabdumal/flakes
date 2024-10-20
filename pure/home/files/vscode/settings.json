@@ -1,168 +1,163 @@
 {
-    "C_Cpp.default.cStandard": "c23",
-    "C_Cpp.default.cppStandard": "c++23",
-    "C_Cpp.default.intelliSenseMode": "clang-x64",
-    "[css]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[handlebars]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[jsonc]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[markdown]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnPaste": true,
-        "editor.formatOnSave": true,
-        "editor.tabSize": 2,
-        "prettier.tabWidth": 2
-    },
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "application.shellEnvironmentResolutionTimeout": 20,
-    "cSpell.language": "en,en-GB,pt,pt-BR",
-    "cSpell.userWords": [
-        "askama",
-        "catppuccin",
-        "clsx",
-        "dotnet",
-        "firefox",
-        "nixpkgs",
-        "plantuml",
-        "tailwindcss"
-    ],
-    "editor.codeActionsOnSave": {
-        "source.fixAll.markdownlint": "explicit"
-    },
-    "editor.detectIndentation": false,
-    "editor.fontSize": 18,
+  "C_Cpp.default.cStandard": "c23",
+  "C_Cpp.default.cppStandard": "c++23",
+  "C_Cpp.default.intelliSenseMode": "clang-x64",
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[handlebars]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
-    "editor.inlineSuggest.enabled": true,
-    "editor.minimap.enabled": false,
-    "editor.mouseWheelZoom": true,
-    "editor.selectionClipboard": false,
-    "editor.semanticHighlighting.enabled": true,
-    "editor.tabSize": 4,
-    "editor.wordWrap": "bounded",
-    "files.associations": {
-        "*.css": "tailwindcss"
-    },
-    "files.autoSave": "afterDelay",
-    "firefox.keepProfileChanges": true,
-    "firefox.profile": "default",
-    "git.autofetch": true,
-    "git.enableCommitSigning": true,
-    "github.copilot.enable": {
-        "*": true
-    },
-    "github.gitProtocol": "ssh",
-    "markdownlint.config": {
-        "MD024": false,
-        "default": true
-    },
-    "markdownlint.run": "onSave",
-    "plantuml.exportFormat": "svg",
-    "plantuml.exportIncludeFolderHeirarchy": false,
-    "plantuml.exportOutDir": "docs",
-    "plantuml.exportSubFolder": false,
-    "plantuml.render": "Local",
-    "tailwindCSS.experimental.classRegex": [
-        [
-            "cva\\(([^)]*)\\)",
-            "[\"'`]([^\"'`]*).*?[\"'`]"
-        ],
-        [
-            "cx\\(([^)]*)\\)",
-            "(?:'|\"|`)([^']*)(?:'|\"|`)"
-        ]
-    ],
-    "terminal.integrated.fontFamily": "'MesloLGS Nerd Font Mono'",
-    "terminal.integrated.minimumContrastRatio": 1,
-    "vite.port": 5173,
-    "window.newWindowProfile": null,
-    "window.titleBarStyle": "custom",
-    "workbench.colorTheme": "Catppuccin Latte",
-    "workbench.experimental.enableNewProfilesUI": true,
-    "workbench.iconTheme": "catppuccin-latte",
-    "workbench.settings.applyToAllProfiles": [
-        "[csharp]",
-        "[css]",
-        "[handlebars]",
-        "[html]",
-        "[javascript]",
-        "[json]",
-        "[jsonc]",
-        "[markdown]",
-        "[typescript]",
-        "[typescriptreact]",
-        "application.shellEnvironmentResolutionTimeout",
-        "C_Cpp.default.cppStandard",
-        "C_Cpp.default.cStandard",
-        "C_Cpp.default.intelliSenseMode",
-        "C_Cpp.intelliSenseEngine",
-        "clang_tidy.additionalOptions",
-        "clang_tidy.checks",
-        "clang_tidy.enabled",
-        "cmake.configureOnOpen",
-        "cmake.pinnedCommands",
-        "cmake.showOptionsMovedNotification",
-        "cSpell.language",
-        "cSpell.userWords",
-        "debug.javascript.autoAttachFilter",
-        "editor.codeActionsOnSave",
-        "editor.detectIndentation",
-        "editor.fontSize",
-        "editor.formatOnSave",
-        "editor.inlineSuggest.enabled",
-        "editor.minimap.enabled",
-        "editor.mouseWheelScrollSensitivity",
-        "editor.mouseWheelZoom",
-        "editor.selectionClipboard",
-        "editor.semanticHighlighting.enabled",
-        "editor.tabSize",
-        "editor.wordWrap",
-        "files.associations",
-        "files.autoSave",
-        "firefox.executable",
-        "firefox.keepProfileChanges",
-        "firefox.profile",
-        "git.autofetch",
-        "git.enableCommitSigning",
-        "github.copilot.enable",
-        "github.gitProtocol",
-        "markdownlint.config",
-        "markdownlint.run",
-        "plantuml.exportFormat",
-        "plantuml.exportIncludeFolderHeirarchy",
-        "plantuml.exportOutDir",
-        "plantuml.exportSubFolder",
-        "plantuml.render",
-        "tailwindCSS.experimental.classRegex",
-        "terminal.integrated.fontFamily",
-        "terminal.integrated.minimumContrastRatio",
-        "terminal.integrated.mouseWheelScrollSensitivity",
-        "window.newWindowProfile",
-        "window.titleBarStyle",
-        "window.zoomLevel",
-        "workbench.colorTheme",
-        "workbench.experimental.enableNewProfilesUI",
-        "workbench.iconTheme",
-        "workbench.list.mouseWheelScrollSensitivity",
-        "workbench.startupEditor"
-    ],
-    "workbench.startupEditor": "none"
+    "editor.tabSize": 2,
+    "prettier.tabWidth": 2
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "application.shellEnvironmentResolutionTimeout": 20,
+  "cSpell.language": "en,en-GB,pt,pt-BR",
+  "cSpell.userWords": [
+    "askama",
+    "catppuccin",
+    "clsx",
+    "dotnet",
+    "firefox",
+    "nixpkgs",
+    "plantuml",
+    "tailwindcss"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.markdownlint": "explicit"
+  },
+  "editor.detectIndentation": false,
+  "editor.fontSize": 18,
+  "editor.formatOnSave": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.minimap.enabled": false,
+  "editor.mouseWheelZoom": true,
+  "editor.selectionClipboard": false,
+  "editor.semanticHighlighting.enabled": true,
+  "editor.tabSize": 4,
+  "editor.wordWrap": "bounded",
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "files.autoSave": "afterDelay",
+  "firefox.keepProfileChanges": true,
+  "firefox.profile": "default",
+  "git.autofetch": true,
+  "git.enableCommitSigning": true,
+  "github.copilot.enable": {
+    "*": true
+  },
+  "github.gitProtocol": "ssh",
+  "markdownlint.config": {
+    "MD024": false,
+    "default": true
+  },
+  "markdownlint.run": "onSave",
+  "plantuml.exportFormat": "svg",
+  "plantuml.exportIncludeFolderHeirarchy": false,
+  "plantuml.exportOutDir": "docs",
+  "plantuml.exportSubFolder": false,
+  "plantuml.render": "Local",
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ],
+  "terminal.integrated.fontFamily": "'MesloLGS Nerd Font Mono'",
+  "terminal.integrated.minimumContrastRatio": 1,
+  "vite.port": 5173,
+  "window.newWindowProfile": null,
+  "window.titleBarStyle": "custom",
+  "window.zoomLevel": 1,
+  "workbench.colorTheme": "Catppuccin Latte",
+  "workbench.experimental.enableNewProfilesUI": true,
+  "workbench.iconTheme": "catppuccin-latte",
+  "workbench.settings.applyToAllProfiles": [
+    "[csharp]",
+    "[css]",
+    "[handlebars]",
+    "[html]",
+    "[javascript]",
+    "[json]",
+    "[jsonc]",
+    "[markdown]",
+    "[typescript]",
+    "[typescriptreact]",
+    "application.shellEnvironmentResolutionTimeout",
+    "C_Cpp.default.cppStandard",
+    "C_Cpp.default.cStandard",
+    "C_Cpp.default.intelliSenseMode",
+    "C_Cpp.intelliSenseEngine",
+    "clang_tidy.additionalOptions",
+    "clang_tidy.checks",
+    "clang_tidy.enabled",
+    "cmake.configureOnOpen",
+    "cmake.pinnedCommands",
+    "cmake.showOptionsMovedNotification",
+    "cSpell.language",
+    "cSpell.userWords",
+    "debug.javascript.autoAttachFilter",
+    "editor.codeActionsOnSave",
+    "editor.detectIndentation",
+    "editor.fontSize",
+    "editor.formatOnSave",
+    "editor.inlineSuggest.enabled",
+    "editor.minimap.enabled",
+    "editor.mouseWheelScrollSensitivity",
+    "editor.mouseWheelZoom",
+    "editor.selectionClipboard",
+    "editor.semanticHighlighting.enabled",
+    "editor.tabSize",
+    "editor.wordWrap",
+    "files.associations",
+    "files.autoSave",
+    "firefox.executable",
+    "firefox.keepProfileChanges",
+    "firefox.profile",
+    "git.autofetch",
+    "git.enableCommitSigning",
+    "github.copilot.enable",
+    "github.gitProtocol",
+    "markdownlint.config",
+    "markdownlint.run",
+    "plantuml.exportFormat",
+    "plantuml.exportIncludeFolderHeirarchy",
+    "plantuml.exportOutDir",
+    "plantuml.exportSubFolder",
+    "plantuml.render",
+    "tailwindCSS.experimental.classRegex",
+    "terminal.integrated.fontFamily",
+    "terminal.integrated.minimumContrastRatio",
+    "terminal.integrated.mouseWheelScrollSensitivity",
+    "window.newWindowProfile",
+    "window.titleBarStyle",
+    "window.zoomLevel",
+    "workbench.colorTheme",
+    "workbench.experimental.enableNewProfilesUI",
+    "workbench.iconTheme",
+    "workbench.list.mouseWheelScrollSensitivity",
+    "workbench.startupEditor"
+  ],
+  "workbench.startupEditor": "none"
 }

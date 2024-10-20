@@ -6,9 +6,12 @@ in
 
   home.packages = with pkgs; [
     (pkgs.wrapFirefox (pkgs.firefox-unwrapped.override { pipewireSupport = true; }) { })
+
     adw-gtk3
+    bottles
     ffmpeg
     imagemagick
+
     ## GNOME
     alacarte
     citations
@@ -20,6 +23,8 @@ in
     switcheroo
     textpieces
     wike
+
+    ## GNOME Extensions
     gnomeExtensions.rounded-window-corners-reborn
   ];
 
