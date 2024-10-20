@@ -1,4 +1,7 @@
 { pkgs, ... }:
+let
+  vsCodeSettings = builtins.fromJSON (builtins.readFile ./files/vscode/settings.json);
+in
 {
 
   home.packages = with pkgs; [
@@ -35,6 +38,7 @@
       enable = true;
       enableUpdateCheck = false;
       mutableExtensionsDir = true;
+      userSettings = vsCodeSettings;
     };
   };
 
