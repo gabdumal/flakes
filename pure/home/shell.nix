@@ -15,10 +15,9 @@
     autosuggestion = {
       enable = true;
     };
-    syntaxHighlighting =
-      {
-        enable = true;
-      };
+    syntaxHighlighting = {
+      enable = true;
+    };
 
     oh-my-zsh = {
       enable = true;
@@ -56,11 +55,6 @@
         monospace = [ "Meslo" ];
       };
     };
-  };
-
-  dconf.settings."org/gnome/Console" = {
-    use-system-font = false;
-    custom-font = "MesloLGS Nerd Font Mono 14";
   };
 
 }
