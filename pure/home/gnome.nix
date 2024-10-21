@@ -8,7 +8,7 @@
       gtk-theme = "adw-gtk3";
     };
     "org/gnome/desktop/session" = {
-      idle-delay = "uint32 900";
+      idle-delay = "uint32 0";
     };
 
     "org/gnome/mutter" = {
@@ -33,6 +33,10 @@
       name = "System Monitor";
       command = "gnome-system-monitor";
       binding = "<Ctrl><Shift>Escape";
+    };
+
+    "org/gnome/settings-daemon/plugins/power" = {
+      sleep-inactive-ac-type = "nothing";
     };
 
     "org/gnome/shell" = {
