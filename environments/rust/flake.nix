@@ -2,31 +2,27 @@
   description = "A Flake for a Rust development environment";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    rust-overlay.url = "github:oxalica/rust-overlay";
   };
 
-  outputs = { self, nixpkgs, ... }:
+  outputs = { self, nixpkgs, rust-overlay, ... }:
     let
-      supportedSystems = [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin" ];
-      forEachSupportedSystem = f: nixpkgs.lib.genAttrs supportedSystems (system: f {
-        pkgs = import nixpkgs { inherit system; };
-      });
+      system = "x86_64-linux";
+      pkgs = import nixpkgs {
+        inherit system;
+        overlays = [ rust-overlay.overlays.default ];
+      };
+      toolchain = pkgs.rust-bin.fromRustupToolchainFile ./toolchain.toml;
     in
     {
-      devShells = forEachSupportedSystem ({ pkgs }: {
-        default = pkgs.mkShell.override
-          { }
-          {
-            buildInputs = with pkgs; [
-              rustc
-              cargo
-              rustfmt
-              rust-analyzer
-              clippy
-            ];
+      devShells.${system}.default = pkgs.mkShell {
+        packages = [
+          toolchain
+          pkgs.rust-analyzer-unwrapped
+        ];
 
-            RUST_BACKTRACE = 1;
-          };
-      });
+        RUST_SRC_PATH = "${toolchain}/lib/rustlib/src/rust/library";
+      };
     };
 }
