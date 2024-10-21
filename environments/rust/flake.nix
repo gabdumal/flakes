@@ -1,5 +1,5 @@
 {
-  description = "A Flake for a Typescript development environment";
+  description = "A Flake for a Rust development environment";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
@@ -17,13 +17,15 @@
         default = pkgs.mkShell.override
           { }
           {
-            packages = with pkgs; [
-              ## Development
-              nodePackages.nodejs
-              nodePackages.pnpm
-              nodePackages.typescript
-              nodePackages.typescript-language-server
+            buildInputs = with pkgs; [
+              rustc
+              cargo
+              rustfmt
+              rust-analyzer
+              clippy
             ];
+
+            RUST_BACKTRACE = 1;
           };
       });
     };
