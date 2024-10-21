@@ -20,6 +20,7 @@
     gnome-terminal
     nil
     nixpkgs-fmt
+    qbittorrent
     thefuck
     usbutils
     zed-editor
