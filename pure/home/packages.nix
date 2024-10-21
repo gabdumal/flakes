@@ -8,7 +8,6 @@ in
     (pkgs.wrapFirefox (pkgs.firefox-unwrapped.override { pipewireSupport = true; }) { })
 
     adw-gtk3
-    bottles
     ffmpeg
     imagemagick
     meld
