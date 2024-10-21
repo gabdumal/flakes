@@ -2,6 +2,9 @@
   "C_Cpp.default.cStandard": "c23",
   "C_Cpp.default.cppStandard": "c++23",
   "C_Cpp.default.intelliSenseMode": "clang-x64",
+  "[asciidoc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -93,7 +96,9 @@
   "workbench.colorTheme": "Catppuccin Latte",
   "workbench.experimental.enableNewProfilesUI": true,
   "workbench.iconTheme": "catppuccin-latte",
+  "git.openRepositoryInParentFolders": "always",
   "workbench.settings.applyToAllProfiles": [
+    "[asciidoc]",
     "[csharp]",
     "[css]",
     "[handlebars]",
@@ -137,6 +142,7 @@
     "firefox.profile",
     "git.autofetch",
     "git.enableCommitSigning",
+    "git.openRepositoryInParentFolders",
     "github.copilot.enable",
     "github.gitProtocol",
     "markdownlint.config",

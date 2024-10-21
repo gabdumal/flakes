@@ -11,6 +11,7 @@ in
     bottles
     ffmpeg
     imagemagick
+    meld
 
     ## GNOME
     alacarte
