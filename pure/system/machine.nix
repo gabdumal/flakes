@@ -34,4 +34,6 @@
       powerOnBoot = true;
     };
 
+  time.hardwareClockInLocalTime = true;
+
 }

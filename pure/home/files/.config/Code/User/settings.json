@@ -71,7 +71,10 @@
   "git.autofetch": true,
   "git.enableCommitSigning": true,
   "github.copilot.enable": {
-    "*": true
+    "*": true,
+    "markdown": true,
+    "plaintext": true,
+    "scminput": true
   },
   "github.gitProtocol": "ssh",
   "markdownlint.config": {
