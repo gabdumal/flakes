@@ -7,6 +7,7 @@
       enable-hot-corners = false;
       gtk-theme = "adw-gtk3";
     };
+
     "org/gnome/desktop/session" = {
       idle-delay = "uint32 0";
     };
