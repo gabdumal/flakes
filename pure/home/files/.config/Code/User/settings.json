@@ -18,13 +18,15 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
   },
   "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
     "editor.tabSize": 2,
@@ -39,6 +41,7 @@
   "application.shellEnvironmentResolutionTimeout": 20,
   "cSpell.language": "en,en-GB,pt,pt-BR",
   "cSpell.userWords": [
+    "Malosto",
     "askama",
     "catppuccin",
     "clsx",
@@ -53,7 +56,9 @@
     "source.fixAll.markdownlint": "explicit"
   },
   "editor.detectIndentation": false,
+  "editor.fontFamily": "'MesloLGL Nerd Font Mono', 'FiraCode Nerd Font Mono'",
   "editor.fontSize": 18,
+  "editor.fontWeight": "400",
   "editor.formatOnSave": true,
   "editor.inlineSuggest.enabled": true,
   "editor.minimap.enabled": false,
@@ -62,19 +67,19 @@
   "editor.semanticHighlighting.enabled": true,
   "editor.tabSize": 4,
   "editor.wordWrap": "bounded",
+  "explorer.confirmDragAndDrop": false,
   "files.associations": {
-    "*.css": "tailwindcss"
+    "*.css": "css",
+    "*.mdx": "mdx"
   },
   "files.autoSave": "afterDelay",
   "firefox.keepProfileChanges": true,
   "firefox.profile": "default",
   "git.autofetch": true,
   "git.enableCommitSigning": true,
+  "git.openRepositoryInParentFolders": "always",
   "github.copilot.enable": {
-    "*": true,
-    "markdown": true,
-    "plaintext": true,
-    "scminput": true
+    "*": true
   },
   "github.gitProtocol": "ssh",
   "markdownlint.config": {
@@ -91,16 +96,14 @@
     ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
     ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
   ],
-  "terminal.integrated.fontFamily": "'MesloLGS Nerd Font Mono'",
+  "terminal.integrated.fontFamily": "'MesloLGS Nerd Font Mono', 'FiraCode Nerd Font Mono'",
   "terminal.integrated.minimumContrastRatio": 1,
+  "update.mode": "none",
   "vite.port": 5173,
   "window.newWindowProfile": null,
   "window.titleBarStyle": "custom",
-  "window.zoomLevel": 1,
   "workbench.colorTheme": "Catppuccin Latte",
-  "workbench.experimental.enableNewProfilesUI": true,
   "workbench.iconTheme": "catppuccin-latte",
-  "git.openRepositoryInParentFolders": "always",
   "workbench.settings.applyToAllProfiles": [
     "[asciidoc]",
     "[csharp]",
@@ -129,6 +132,7 @@
     "debug.javascript.autoAttachFilter",
     "editor.codeActionsOnSave",
     "editor.detectIndentation",
+    "editor.fontFamily",
     "editor.fontSize",
     "editor.formatOnSave",
     "editor.inlineSuggest.enabled",
@@ -139,6 +143,7 @@
     "editor.semanticHighlighting.enabled",
     "editor.tabSize",
     "editor.wordWrap",
+    "explorer.confirmDragAndDrop",
     "files.associations",
     "files.autoSave",
     "firefox.executable",
@@ -169,5 +174,8 @@
     "workbench.list.mouseWheelScrollSensitivity",
     "workbench.startupEditor"
   ],
-  "workbench.startupEditor": "none"
+  "workbench.startupEditor": "none",
+  "[mdx]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
