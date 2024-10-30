@@ -10,6 +10,8 @@
 
   fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "Meslo" ]; })
+    montserrat
+    raleway
   ];
 
   environment.systemPackages = with pkgs; [
