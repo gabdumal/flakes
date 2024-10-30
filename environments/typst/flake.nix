@@ -18,6 +18,7 @@
           { }
           {
             packages = with pkgs; [
+              hayagriva
               typstyle
               typst
               tinymist
