@@ -32,6 +32,9 @@
     "editor.tabSize": 2,
     "prettier.tabWidth": 2
   },
+  "[mdx]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -41,7 +44,6 @@
   "application.shellEnvironmentResolutionTimeout": 20,
   "cSpell.language": "en,en-GB,pt,pt-BR",
   "cSpell.userWords": [
-    "Malosto",
     "askama",
     "catppuccin",
     "clsx",
@@ -79,7 +81,9 @@
   "git.enableCommitSigning": true,
   "git.openRepositoryInParentFolders": "always",
   "github.copilot.enable": {
-    "*": true
+    "*": true,
+    "markdown": true,
+    "plaintext": true
   },
   "github.gitProtocol": "ssh",
   "markdownlint.config": {
@@ -102,6 +106,7 @@
   "vite.port": 5173,
   "window.newWindowProfile": null,
   "window.titleBarStyle": "custom",
+  "window.zoomLevel": 1,
   "workbench.colorTheme": "Catppuccin Latte",
   "workbench.iconTheme": "catppuccin-latte",
   "workbench.settings.applyToAllProfiles": [
@@ -174,8 +179,5 @@
     "workbench.list.mouseWheelScrollSensitivity",
     "workbench.startupEditor"
   ],
-  "workbench.startupEditor": "none",
-  "[mdx]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  "workbench.startupEditor": "none"
 }
