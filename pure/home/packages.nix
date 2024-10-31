@@ -11,6 +11,7 @@ in
     ffmpeg
     imagemagick
     meld
+    libreoffice
 
     ## GNOME
     alacarte
