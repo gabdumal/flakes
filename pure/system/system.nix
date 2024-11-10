@@ -4,6 +4,8 @@
   imports = [
     ./machine.nix
     ./packages.nix
+    ./programs.nix
+    ./services.nix
   ];
 
   system.stateVersion = "24.05";
