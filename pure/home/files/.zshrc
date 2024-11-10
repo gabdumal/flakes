@@ -14,6 +14,10 @@ home-manager-switch(){
     home-manager switch -b backup --flake ~/.dotfiles/$HOST/custom#custom
 }
 
+nixos-switch(){
+    sudo nixos-rebuild switch --flake ~/.dotfiles/$HOST/custom#custom
+}
+
 develop() {
     case $1 in
         rust)

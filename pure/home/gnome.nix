@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
 
   dconf.settings = {
@@ -9,7 +9,7 @@
     };
 
     "org/gnome/desktop/session" = {
-      idle-delay = "0";
+      idle-delay = lib.hm.gvariant.mkUint32 0;
     };
 
     "org/gnome/mutter" = {

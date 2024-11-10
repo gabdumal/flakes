@@ -1,6 +1,9 @@
 { pkgs, ... }:
 {
 
+  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowUnfreePredicate = _: true;
+
   imports = [
     ./machine.nix
     ./packages.nix
@@ -10,9 +13,6 @@
 
   system.stateVersion = "24.05";
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-  nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.allowUnfreePredicate = _: true;
 
   users.defaultUserShell = pkgs.zsh;
 
