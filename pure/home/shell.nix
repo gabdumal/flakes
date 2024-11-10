@@ -1,4 +1,7 @@
 { pkgs, ... }:
+let
+  zshConfig = builtins.readFile files/.zshrc;
+in
 {
 
   home.packages = with pkgs; [
@@ -26,11 +29,7 @@
 
     initExtra = ''
       ### Pure InitExtra definitions
-        if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-          eval "$(oh-my-posh init zsh)"
-        fi
-        eval "$(oh-my-posh init zsh --config ~/.dotfiles/omp.json)"
-        eval $(thefuck --alias)
+      ${zshConfig}
       ### END Pure InitExtra definitions
     '';
 

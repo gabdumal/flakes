@@ -1,6 +1,6 @@
 {
 
-  description = "Gabdumal's flakes templates";
+  description = "Gabdumal's flakes templates.";
 
   outputs = { self }: {
 
@@ -8,12 +8,12 @@
 
       pure = {
         path = ./pure;
-        description = "A pure NixOS configuration";
+        description = "A pure NixOS configuration.";
       };
 
-      impure = {
-        path = ./impure;
-        description = "Flake that defines hardware configurations";
+      custom = {
+        path = ./custom;
+        description = "Defines hardware configuration and custom definitions.";
       };
 
     };

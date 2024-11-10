@@ -31,7 +31,7 @@
       };
 
       homeConfigurations = {
-        impure = home-manager.lib.homeManagerConfiguration {
+        custom = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           modules = [
             ./home/home.nix

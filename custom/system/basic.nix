@@ -1,11 +1,14 @@
 { pkgs, fullname, username, hostname, ... }:
-
 {
 
-  imports =
-    [
-      ./hardware-configuration.nix
-    ];
+  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowUnfreePredicate = _: true;
+
+  imports = [
+    ./hardware-configuration.nix
+  ];
+
+  boot.supportedFilesystems = [ "ntfs" ];
 
   users.defaultUserShell = pkgs.zsh;
 
@@ -13,7 +16,7 @@
   users.users.${username} = {
     isNormalUser = true;
     description = "${fullname}";
-    extraGroups = [ "networkmanager" "wheel" "bluetooth" ];
+    extraGroups = [ "networkmanager" "wheel" "bluetooth" "libvirtd" ];
   };
 
   # Enable automatic login for the user.

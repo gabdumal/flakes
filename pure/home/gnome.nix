@@ -9,7 +9,7 @@
     };
 
     "org/gnome/desktop/session" = {
-      idle-delay = "uint32 0";
+      idle-delay = "0";
     };
 
     "org/gnome/mutter" = {
