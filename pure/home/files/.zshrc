@@ -1,21 +1,33 @@
 # Nix
 ## Configuration
-nix-edit-pure (){
-    code $HOME/dev/flakes
-}
-
-nix-edit-custom(){
-    code $HOME/.dotfiles/$HOST/custom
+nix-edit() {
+    case $1 in
+        pure)
+            code $HOME/dev/flakes
+            ;;
+        custom)
+            code $HOME/.dotfiles/$HOST/custom
+            ;;
+        *)
+            echo "Unknown flake: $1. Available: pure, custom."
+            ;;
+    esac
 }
 
 ## Deployment
-home-manager-switch(){
-    rm ~/.ssh/known_hosts.backup
-    home-manager switch -b backup --flake ~/.dotfiles/$HOST/custom#custom
-}
-
-nixos-switch(){
-    sudo nixos-rebuild switch --flake ~/.dotfiles/$HOST/custom#custom
+nix-switch() {
+    case $1 in
+        home)
+            rm ~/.ssh/known_hosts.backup
+            home-manager switch -b backup --flake ~/.dotfiles/$HOST/custom#custom
+            ;;
+        nixos)
+            sudo nixos-rebuild switch --flake ~/.dotfiles/$HOST/custom#custom
+            ;;
+        *)
+            echo "Unknown system: $1. Available: home, nixos."
+            ;;
+    esac
 }
 
 develop() {
@@ -30,7 +42,7 @@ develop() {
             nix develop ~/.dotfiles/$HOST/environments/typst
             ;;
         *)
-            echo "Unknown environment: $1"
+            echo "Unknown environment: $1. Available: rust, typescript, typst."
             ;;
     esac
 }
