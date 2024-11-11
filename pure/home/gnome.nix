@@ -9,7 +9,7 @@
     };
 
     "org/gnome/desktop/session" = {
-      idle-delay = lib.hm.gvariant.mkUint32 0;
+      idle-delay = lib.hm.gvariant.mkUint32 900;
     };
 
     "org/gnome/mutter" = {
@@ -37,7 +37,7 @@
     };
 
     "org/gnome/settings-daemon/plugins/power" = {
-      sleep-inactive-ac-type = "nothing";
+      sleep-inactive-ac-type = "blank";
     };
 
     "org/gnome/shell" = {

@@ -28,11 +28,10 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
-  hardware.bluetooth =
-    {
-      enable = true;
-      powerOnBoot = true;
-    };
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+  };
 
   time.hardwareClockInLocalTime = true;
 

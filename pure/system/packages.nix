@@ -23,7 +23,6 @@
     nil
     nixpkgs-fmt
     qbittorrent
-    remmina
     thefuck
     usbutils
     wget
