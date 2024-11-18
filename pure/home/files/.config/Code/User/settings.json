@@ -42,6 +42,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "application.shellEnvironmentResolutionTimeout": 20,
+  "cSpell.enableFiletypes": ["mdx"],
   "cSpell.language": "en,en-GB,pt,pt-BR",
   "cSpell.userWords": [
     "askama",
@@ -95,7 +96,6 @@
   "plantuml.exportIncludeFolderHeirarchy": false,
   "plantuml.exportOutDir": "docs",
   "plantuml.exportSubFolder": false,
-  "plantuml.render": "Local",
   "tailwindCSS.experimental.classRegex": [
     ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
     ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
@@ -132,6 +132,7 @@
     "cmake.configureOnOpen",
     "cmake.pinnedCommands",
     "cmake.showOptionsMovedNotification",
+    "cSpell.enableFiletypes",
     "cSpell.language",
     "cSpell.userWords",
     "debug.javascript.autoAttachFilter",
@@ -165,7 +166,6 @@
     "plantuml.exportIncludeFolderHeirarchy",
     "plantuml.exportOutDir",
     "plantuml.exportSubFolder",
-    "plantuml.render",
     "tailwindCSS.experimental.classRegex",
     "terminal.integrated.fontFamily",
     "terminal.integrated.minimumContrastRatio",

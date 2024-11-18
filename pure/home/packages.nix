@@ -5,13 +5,7 @@ in
 {
 
   home.packages = with pkgs; [
-    (pkgs.wrapFirefox (pkgs.firefox-unwrapped.override { pipewireSupport = true; }) { })
-
     adw-gtk3
-    ffmpeg
-    imagemagick
-    meld
-    libreoffice
 
     ## GNOME
     alacarte
@@ -27,6 +21,17 @@ in
 
     ## GNOME Extensions
     gnomeExtensions.rounded-window-corners-reborn
+
+    ## Multimedia
+    ffmpeg
+    imagemagick
+    meld
+
+    ## Office
+    libreoffice
+
+    ## Web
+    (pkgs.wrapFirefox (pkgs.firefox-unwrapped.override { pipewireSupport = true; }) { })
   ];
 
   programs = {

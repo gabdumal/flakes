@@ -2,6 +2,10 @@
 {
 
   services = {
+    flatpak = {
+      enable = true;
+    };
+
     logind = {
       powerKey = "hybrid-sleep";
       powerKeyLongPress = "poweroff";

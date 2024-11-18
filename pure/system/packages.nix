@@ -15,18 +15,30 @@
   ];
 
   environment.systemPackages = with pkgs; [
+    ## Multimedia
+    qbittorrent
+
+    ## Nix
     appimage-run
-    bluez
-    bluez-tools
-    fastfetch
-    gnome-terminal
     nil
     nixpkgs-fmt
-    qbittorrent
-    thefuck
+
+    ## Programming
+    zed-editor
+
+    ## System
+    bluez
+    bluez-tools
     usbutils
     wget
-    zed-editor
+
+    ## Terminal
+    fastfetch
+    gnome-terminal
+    thefuck
+
+    ## Web
+    chromium
   ];
 
 }
