@@ -11,12 +11,10 @@
       powerKeyLongPress = "poweroff";
     };
 
-    xrdp = {
-      defaultWindowManager = "${pkgs.gnome-session}/bin/gnome-session";
-      enable = true;
-      openFirewall = true;
-    };
+    udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
+
   };
+
 
   systemd = {
     targets = {

@@ -20,6 +20,7 @@ in
     wike
 
     ## GNOME Extensions
+    gnomeExtensions.appindicator
     gnomeExtensions.rounded-window-corners-reborn
 
     ## Multimedia

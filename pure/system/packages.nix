@@ -5,6 +5,7 @@
   nixpkgs.config.allowUnfreePredicate = _: true;
 
   environment.gnome.excludePackages = with pkgs; [
+    gnome-connections
     gnome-console
   ];
 
