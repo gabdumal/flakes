@@ -32,17 +32,12 @@ nix-switch() {
 
 develop() {
     case $1 in
-        rust)
-            nix develop ~/.dotfiles/$HOST/environments/rust
-            ;;
-        typescript)
-            nix develop ~/.dotfiles/$HOST/environments/typescript
-            ;;
-        typst)
-            nix develop ~/.dotfiles/$HOST/environments/typst
+        rust|typescript|typst|latex)
+            env_path=~/.dotfiles/$HOST/environments/$1
             ;;
         *)
-            echo "Unknown environment: $1. Available: rust, typescript, typst."
+            echo "Unknown environment: $1. Available: rust, typescript, typst, latex."
+            exit 1
             ;;
     esac
 }
