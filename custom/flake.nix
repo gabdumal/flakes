@@ -17,8 +17,8 @@
       username = "[ username ]";
       hostname = "[ hostname ]";
 
-      lib = nixpkgs.lib;
-      legacyPkgs = nixpkgs.legacyPackages.${system};
+      pkgs = import pure { inherit system; };
+      lib = pkgs.lib;
     in
     {
 
@@ -42,7 +42,7 @@
 
       homeConfigurations = {
         custom = home-manager.lib.homeManagerConfiguration {
-          pkgs = legacyPkgs;
+          pkgs = pkgs;
           extraSpecialArgs = {
             inherit fullname;
             inherit username;
@@ -58,4 +58,3 @@
     };
 
 }
-
