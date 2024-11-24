@@ -15,8 +15,8 @@
   outputs = { self, nixpkgs, home-manager, ... }:
     let
       system = "x86_64-linux";
+      lib = nixpkgs.lib;
       pkgs = import nixpkgs { inherit system; };
-      lib = pkgs.lib;
     in
     {
 
