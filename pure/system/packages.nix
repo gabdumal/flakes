@@ -25,11 +25,13 @@
     nixpkgs-fmt
 
     ## Programming
-    zed-editor
+    jetbrains-toolbox
+    temurin-bin
 
     ## System
     bluez
     bluez-tools
+    curl
     usbutils
     wget
 

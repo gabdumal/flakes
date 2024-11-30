@@ -31,6 +31,9 @@ in
     ## Office
     libreoffice
 
+    ## Programming
+    zed-editor
+
     ## Web
     (pkgs.wrapFirefox (pkgs.firefox-unwrapped.override { pipewireSupport = true; }) { })
   ];
