@@ -17,12 +17,13 @@
       username = "[ username ]";
       hostname = "[ hostname ]";
 
+      lib = nixpkgs.lib;
       pkgs = import nixpkgs { inherit system; };
     in
     {
 
       nixosConfigurations = {
-        custom = pkgs.lib.nixosSystem {
+        custom = lib.nixosSystem {
           inherit system;
           specialArgs = {
             inherit inputs;

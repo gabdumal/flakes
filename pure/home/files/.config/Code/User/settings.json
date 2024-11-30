@@ -45,6 +45,7 @@
   "cSpell.enableFiletypes": ["mdx"],
   "cSpell.language": "en,en-GB,pt,pt-BR",
   "cSpell.userWords": [
+    "Malosto",
     "askama",
     "catppuccin",
     "clsx",
@@ -76,6 +77,9 @@
     "*.mdx": "mdx"
   },
   "files.autoSave": "afterDelay",
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
   "firefox.keepProfileChanges": true,
   "firefox.profile": "default",
   "git.autofetch": true,
@@ -96,6 +100,7 @@
   "plantuml.exportIncludeFolderHeirarchy": false,
   "plantuml.exportOutDir": "docs",
   "plantuml.exportSubFolder": false,
+  "plantuml.render": "Local",
   "tailwindCSS.experimental.classRegex": [
     ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
     ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
@@ -106,7 +111,6 @@
   "vite.port": 5173,
   "window.newWindowProfile": null,
   "window.titleBarStyle": "custom",
-  "window.zoomLevel": 1,
   "workbench.colorTheme": "Catppuccin Latte",
   "workbench.iconTheme": "catppuccin-latte",
   "workbench.settings.applyToAllProfiles": [
@@ -132,7 +136,6 @@
     "cmake.configureOnOpen",
     "cmake.pinnedCommands",
     "cmake.showOptionsMovedNotification",
-    "cSpell.enableFiletypes",
     "cSpell.language",
     "cSpell.userWords",
     "debug.javascript.autoAttachFilter",
@@ -166,6 +169,7 @@
     "plantuml.exportIncludeFolderHeirarchy",
     "plantuml.exportOutDir",
     "plantuml.exportSubFolder",
+    "plantuml.render",
     "tailwindCSS.experimental.classRegex",
     "terminal.integrated.fontFamily",
     "terminal.integrated.minimumContrastRatio",
