@@ -111,6 +111,7 @@
   "vite.port": 5173,
   "window.newWindowProfile": null,
   "window.titleBarStyle": "custom",
+  "window.zoomLevel": 1,
   "workbench.colorTheme": "Catppuccin Latte",
   "workbench.iconTheme": "catppuccin-latte",
   "workbench.settings.applyToAllProfiles": [
