@@ -2,47 +2,39 @@
   "nodes": {
     "home-manager": {
       "inputs": {
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": [
+          "nixpkgs"
+        ]
       },
       "locked": {
-        "lastModified": 1733133928,
-        "narHash": "sha256-gU40r9AfpIr4eq+0noM8yH1Hxf+EA3dqfIpFtQl8Y1E=",
+        "lastModified": 1733050161,
+        "narHash": "sha256-lYnT+EYE47f5yY3KS/Kd4pJ6CO9fhCqumkYYkQ3TK20=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "873e39d5f4437d2f3ab06881fea8e63e45e1d011",
+        "rev": "62d536255879be574ebfe9b87c4ac194febf47c5",
         "type": "github"
       },
       "original": {
-        "id": "home-manager",
-        "type": "indirect"
+        "owner": "nix-community",
+        "ref": "release-24.11",
+        "repo": "home-manager",
+        "type": "github"
       }
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1732837521,
-        "narHash": "sha256-jNRNr49UiuIwaarqijgdTR2qLPifxsVhlJrKzQ8XUIE=",
-        "owner": "NixOS",
+        "lastModified": 1733321396,
+        "narHash": "sha256-CxLbArzs0EprfHSXuL4OTwcrHSsNyV/ZZM2nKBsD++k=",
+        "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "970e93b9f82e2a0f3675757eb0bfc73297cc6370",
+        "rev": "31727ef3b0dabc0edc6544272d111deab81243ec",
         "type": "github"
       },
       "original": {
-        "owner": "NixOS",
-        "ref": "nixos-unstable",
+        "owner": "nixos",
+        "ref": "release-24.11",
         "repo": "nixpkgs",
         "type": "github"
-      }
-    },
-    "nixpkgs_2": {
-      "locked": {
-        "lastModified": 0,
-        "narHash": "sha256-yumd4fBc/hi8a9QgA9IT8vlQuLZ2oqhkJXHPKxH/tRw=",
-        "path": "/nix/store/rs4fjbnw4qx7ns2hzzrz2iz52va7vs5z-source",
-        "type": "path"
-      },
-      "original": {
-        "id": "nixpkgs",
-        "type": "indirect"
       }
     },
     "pure": {
@@ -56,11 +48,11 @@
       },
       "locked": {
         "dir": "pure",
-        "lastModified": 1733154313,
-        "narHash": "sha256-EIujJhCw1vORcEjZpkNiPpg6e8sl2b9j2v+HIuKdzTY=",
+        "lastModified": 1733321023,
+        "narHash": "sha256-zbJ7S625igAEa8TJMNpgc5MrXZ2sTIHADovO8wP/ozI=",
         "owner": "gabdumal",
         "repo": "flakes",
-        "rev": "1f0634b3badb5e94a5c0befdc6fedc185f2e4129",
+        "rev": "ff197e229f02d9baf589ff6812fc875baba72ce2",
         "type": "github"
       },
       "original": {
@@ -73,7 +65,7 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs_2",
+        "nixpkgs": "nixpkgs",
         "pure": "pure"
       }
     }

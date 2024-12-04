@@ -3,6 +3,13 @@
   description = "Defines hardware configuration and custom definitions.";
 
   inputs = {
+    nixpkgs = {
+      url = "github:nixos/nixpkgs/release-24.11";
+    };
+    home-manager = {
+      url = "github:nix-community/home-manager/release-24.11";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     pure = {
       url = "github:gabdumal/flakes?dir=pure";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -16,15 +23,13 @@
       fullname = "[ Full Name ]";
       username = "[ username ]";
       hostname = "[ hostname ]";
-
-      lib = nixpkgs.lib;
-      pkgs = import nixpkgs { inherit system; };
     in
     {
 
       nixosConfigurations = {
-        custom = lib.nixosSystem {
+        custom = nixpkgs.lib.nixosSystem {
           inherit system;
+
           specialArgs = {
             inherit inputs;
             inherit system;
@@ -32,6 +37,7 @@
             inherit username;
             inherit hostname;
           };
+
           modules = [
             "${pure}/system/system.nix"
             ./system/basic.nix
@@ -42,11 +48,13 @@
 
       homeConfigurations = {
         custom = home-manager.lib.homeManagerConfiguration {
-          pkgs = pkgs;
+          pkgs = import nixpkgs { inherit system; };
+
           extraSpecialArgs = {
             inherit fullname;
             inherit username;
           };
+
           modules = [
             "${pure}/home/home.nix"
             ./home/basic.nix
