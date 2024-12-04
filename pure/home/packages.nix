@@ -37,7 +37,11 @@ in
     menulibre
 
     # Web
-    (pkgs.wrapFirefox (pkgs.firefox-unwrapped.override { pipewireSupport = true; }) { })
+    chromium
+    (pkgs.wrapFirefox
+      (pkgs.firefox-unwrapped.override
+        { pipewireSupport = true; })
+      { })
   ];
 
   programs = {

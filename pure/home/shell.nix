@@ -34,8 +34,6 @@ in
         ### END Pure InitExtra definitions
       '';
 
-      sessionVariables = { };
-
       shellAliases = {
         # Zoxide
         cd = "z";

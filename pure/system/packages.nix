@@ -10,7 +10,12 @@
   ];
 
   fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "Meslo" ]; })
+    (nerdfonts.override {
+      fonts = [
+        "Meslo"
+        "FiraCode"
+      ];
+    })
     montserrat
     raleway
   ];
@@ -39,9 +44,6 @@
     fastfetch
     gnome-terminal
     thefuck
-
-    ## Web
-    chromium
   ];
 
 }
