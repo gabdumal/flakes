@@ -18,7 +18,6 @@ nix-edit() {
 nix-switch() {
     case $1 in
         home)
-            rm ~/.ssh/known_hosts.backup
             home-manager switch -b backup --flake ~/.dotfiles/$HOST/custom#custom
             ;;
         nixos)
