@@ -36,7 +36,6 @@ in
     menulibre
 
     ## Web
-    chromium
     (pkgs.wrapFirefox
       (pkgs.firefox-unwrapped.override
         { pipewireSupport = true; })
