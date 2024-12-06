@@ -6,7 +6,9 @@
       enable = true;
     };
 
-    noisetorch.enable = true;
+    noisetorch = {
+      enable = true;
+    };
 
     ssh = {
       knownHosts = {

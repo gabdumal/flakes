@@ -5,9 +5,7 @@ in
 {
 
   home.packages = with pkgs; [
-    adw-gtk3
-
-    # GNOME
+    ## GNOME
     citations
     collision
     dconf-editor
@@ -18,25 +16,26 @@ in
     textpieces
     wike
 
-    # GNOME Extensions
+    ## GNOME Extensions
     gnomeExtensions.appindicator
     gnomeExtensions.rounded-window-corners-reborn
 
-    # Multimedia
+    ## Multimedia
     ffmpeg
     imagemagick
     meld
 
-    # Office
+    ## Office
     libreoffice
 
-    # Programming
+    ## Programming
     zed-editor
 
-    # System
+    ## System
+    adw-gtk3
     menulibre
 
-    # Web
+    ## Web
     chromium
     (pkgs.wrapFirefox
       (pkgs.firefox-unwrapped.override

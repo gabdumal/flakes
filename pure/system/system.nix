@@ -5,10 +5,13 @@
   nixpkgs.config.allowUnfreePredicate = _: true;
 
   imports = [
+    ./display.nix
+    ./locales.nix
     ./machine.nix
     ./packages.nix
     ./programs.nix
     ./services.nix
+    ./variables.nix
   ];
 
   system.stateVersion = "24.11";
@@ -16,58 +19,13 @@
 
   users.defaultUserShell = pkgs.zsh;
 
-  # Set your time zone.
-  time.timeZone = "America/Sao_Paulo";
-
-  # Select internationalisation properties.
-  i18n.defaultLocale = "en_US.UTF-8";
-
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "pt_BR.UTF-8";
-    LC_IDENTIFICATION = "pt_BR.UTF-8";
-    LC_MEASUREMENT = "pt_BR.UTF-8";
-    LC_MONETARY = "pt_BR.UTF-8";
-    LC_NAME = "pt_BR.UTF-8";
-    LC_NUMERIC = "pt_BR.UTF-8";
-    LC_PAPER = "pt_BR.UTF-8";
-    LC_TELEPHONE = "pt_BR.UTF-8";
-    LC_TIME = "pt_BR.UTF-8";
-  };
-
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
-  # Configure Wayland support.
-  xdg = {
-    portal = {
-      enable = true;
-      extraPortals = with pkgs; [
-        xdg-desktop-portal-wlr
-        xdg-desktop-portal-gtk
-      ];
-    };
-  };
-  # environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  ## Privileges
   security.polkit.enable = true;
-  hardware.graphics.enable = true; # when using QEMU KVM
-
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "intl";
-  };
-
-  # Configure console keymap
-  console.keyMap = "us-acentos";
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
-  # Enable sound with pipewire.
+  ## Pipewire
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {

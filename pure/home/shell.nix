@@ -5,6 +5,7 @@ in
 {
 
   home.packages = with pkgs; [
+    ## Shell
     oh-my-posh
   ];
 

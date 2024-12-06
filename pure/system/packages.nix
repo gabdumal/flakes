@@ -31,17 +31,17 @@
     jetbrains-toolbox
     temurin-bin
 
+    ## Shell
+    fastfetch
+    gnome-terminal
+    thefuck
+
     ## System
     bluez
     bluez-tools
     curl
     usbutils
     wget
-
-    ## Terminal
-    fastfetch
-    gnome-terminal
-    thefuck
   ];
 
 }

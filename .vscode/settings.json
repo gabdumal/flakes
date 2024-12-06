@@ -1,3 +1,13 @@
 {
-  "cSpell.words": ["direnv", "nixos", "pkgs"]
+  "cSpell.words": [
+    "alsa",
+    "direnv",
+    "Keymap",
+    "Meslo",
+    "nixos",
+    "pipewire",
+    "pkgs",
+    "pulseaudio",
+    "zoxide"
+  ]
 }
