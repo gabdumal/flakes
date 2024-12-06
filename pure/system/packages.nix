@@ -10,10 +10,11 @@
   ];
 
   fonts.packages = with pkgs; [
+    montserrat
     nerd-fonts.fira-code
     nerd-fonts.meslo-lg
     nerd-fonts.martian-mono
-    montserrat
+    nerd-fonts.space-mono
     raleway
   ];
 
