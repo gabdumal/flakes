@@ -29,7 +29,7 @@
 
     ### Jetbrains
     jetbrains.idea-ultimate
-    # github-copilot-intellij-agent
+    github-copilot-intellij-agent
 
     ## Shell
     fastfetch
