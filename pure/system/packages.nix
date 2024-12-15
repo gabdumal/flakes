@@ -28,8 +28,11 @@
     nixpkgs-fmt
 
     ## Programming
-    jetbrains-toolbox
     temurin-bin
+
+    ### Jetbrains
+    jetbrains.idea-ultimate
+    # github-copilot-intellij-agent
 
     ## Shell
     fastfetch

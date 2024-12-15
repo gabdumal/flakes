@@ -49,12 +49,12 @@ in
 
 
   fonts = {
-    fontconfig = {
-      enable = true;
-      defaultFonts = {
-        monospace = [ "Meslo" ];
-      };
-    };
+    # fontconfig = {
+    #   enable = true;
+    #   defaultFonts = {
+    #     monospace = [ "Meslo" ];
+    #   };
+    # };
   };
 
 }

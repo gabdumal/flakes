@@ -37,8 +37,9 @@ in
 
     ## Web
     (pkgs.wrapFirefox
-      (pkgs.firefox-unwrapped.override
-        { pipewireSupport = true; })
+      (pkgs.firefox-unwrapped.override {
+        pipewireSupport = true;
+      })
       { })
   ];
 
