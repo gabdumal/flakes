@@ -24,9 +24,6 @@
     nil
     nixpkgs-fmt
 
-    ## Programming
-    temurin-bin
-
     ### Jetbrains
     jetbrains.idea-ultimate
 
