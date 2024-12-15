@@ -1,9 +1,6 @@
 { pkgs, ... }:
 {
 
-  nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.allowUnfreePredicate = _: true;
-
   environment.gnome.excludePackages = with pkgs; [
     gnome-connections
     gnome-console
@@ -43,6 +40,7 @@
     bluez
     bluez-tools
     curl
+    nix-ld
     usbutils
     wget
   ];

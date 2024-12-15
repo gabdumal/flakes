@@ -1,14 +1,9 @@
 { pkgs, fullname, username, hostname, ... }:
 {
 
-  nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.allowUnfreePredicate = _: true;
-
   imports = [
     ./hardware-configuration.nix
   ];
-
-  boot.supportedFilesystems = [ "ntfs" ];
 
   users.defaultUserShell = pkgs.zsh;
 
@@ -20,8 +15,8 @@
   };
 
   # Enable automatic login for the user.
-  services.displayManager.autoLogin.enable = true;
-  services.displayManager.autoLogin.user = "${username}";
+  # services.displayManager.autoLogin.enable = true;
+  # services.displayManager.autoLogin.user = "${username}";
 
   ## Networking
   networking.hostName = "${hostname}"; # Define your hostname.

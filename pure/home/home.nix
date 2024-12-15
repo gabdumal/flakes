@@ -8,6 +8,7 @@
     ./dotfiles.nix
     ./gnome.nix
     ./packages.nix
+    ./programs.nix
     ./shell.nix
   ];
 
