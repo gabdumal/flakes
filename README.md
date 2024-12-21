@@ -170,3 +170,23 @@ In order to access the configuration files, you can use the following command:
 ```bash
 nix-edit custom
 ```
+
+### Updating
+
+From time to time, you may want to update the flake inputs.
+After entering the `custom` directory, you can use the following command:
+
+```bash
+nix flake update
+```
+
+Then, commit the changes to the repository.
+So you can run the `switch` command.
+
+### Cleaning
+
+You can clean the system of unused packages with the following command:
+
+```bash
+nix-store --gc
+```
