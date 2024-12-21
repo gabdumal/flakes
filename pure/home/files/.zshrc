@@ -41,6 +41,10 @@ develop() {
     esac
 }
 
+nix-update-all() {
+    $HOME/.dotfiles/$HOST/custom/update.sh
+}
+
 # Programs
 ## Rust
 export PATH="$HOME/.cargo/bin:$PATH"

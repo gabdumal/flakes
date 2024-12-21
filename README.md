@@ -215,6 +215,7 @@ From time to time, you may want to update the flake inputs.
 To do so, you can entre the `custom` directory, and use the following command:
 
 ```bash
+cd ~/.dotfiles/[hostname]/custom
 nix flake update
 ```
 
@@ -222,6 +223,19 @@ This will update the NixOS, the Home Manager and the environments inputs.
 
 Then, commit the changes to the repository.
 So you can run the `switch` command.
+
+Or, you can use the `update` script to do that for you.
+
+```bash
+cd ~/.dotfiles/[hostname]/custom
+./update.sh
+```
+
+Alternatively, run the following helper command instead:
+
+```bash
+nix-update-all
+```
 
 ### Cleaning
 
