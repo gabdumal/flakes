@@ -75,13 +75,11 @@ sudo nixos-generate-config
 Copy the file `hardware-configuration.nix` to the flake directory that you have cloned the repository to.
 
 ```bash
-sudo cp /etc/nixos/hardware-configuration.nix [path_of_the_flake_folder]/hardware-configuration.nix
-```
+sudo cp /etc/nixos/hardware-configuration.nix [path_of_the_flake_folder]/system/hardware-configuration.nix
 
-If you have followed the suggestion to clone the repository to `~/.dotfiles`, the command would be the following, replacing `[hostname]`:
+# If you have followed the suggestion to clone the repository to `~/.dotfiles`, the command would be the following, replacing `[hostname]`:
 
-```bash
-sudo cp /etc/nixos/hardware-configuration.nix ~/.dotfiles/[hostname]/custom/hardware-configuration.nix
+sudo cp /etc/nixos/hardware-configuration.nix ~/.dotfiles/[hostname]/custom/system/hardware-configuration.nix
 ```
 
 Do **not** edit the contents of the `hardware-configuration.nix` file.
@@ -124,6 +122,17 @@ Then, you can build the system with:
 ```bash
 cd ..
 ./update.sh
+```
+
+Now, you have to configure this configuration folder as a repository.
+Run the following commands to initialize the repository.
+Remember to replace `[Full Name]` and `[email]` with your full name and email.
+
+```bash
+git config user.name "[Full Name]"
+git config user.email "[email]"
+git add .
+git commit -m "Initialize Nix configuration"
 ```
 
 ### NixOS
@@ -191,6 +200,15 @@ In order to access the configuration files, you can use the following command:
 ```bash
 nix-edit custom
 ```
+
+After editing the files, you can commit the changes to the repository.
+
+```bash
+git add .
+git commit -m "Update configuration"
+```
+
+Then, you can run the `switch` command.
 
 ### Updating
 
