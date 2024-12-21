@@ -35,7 +35,7 @@ Clone this repository to your local machine.
 Personally, I like so set all my configuration in a directory named `.dotfiles` in my home directory.
 Then, clone the repository to a folder named after the hostname of the machine I am configuring.
 
-```sh
+```bash
 mkdir ~/.dotfiles
 cd ~/.dotfiles
 git clone https://github.com/gabdumal/flakes.git [hostname]
@@ -44,7 +44,7 @@ git clone https://github.com/gabdumal/flakes.git [hostname]
 We will make changes only to the `custom` directory.
 Enter the folder you just cloned, and then the `custom` directory.
 
-```sh
+```bash
 cd [hostname]
 cd custom
 ```
@@ -53,20 +53,20 @@ cd custom
 
 You now need to generate your hardware configuration, by using the following commands
 
-```sh
+```bash
 cd /etc/nixos
 sudo nixos-generate-config
 ```
 
 Copy the file `hardware-configuration.nix` to the flake directory that you have cloned the repository to.
 
-```sh
+```bash
 sudo cp /etc/nixos/hardware-configuration.nix [path_of_the_flake_folder]/hardware-configuration.nix
 ```
 
 If you have followed the suggestion to clone the repository to `~/.dotfiles`, the command would be the following, replacing `[hostname]`:
 
-```sh
+```bash
 sudo cp /etc/nixos/hardware-configuration.nix ~/.dotfiles/[hostname]/custom/hardware-configuration.nix
 ```
 
@@ -100,7 +100,7 @@ imports = [
 Now, `cd` into the `custom` flake directory.
 Then, you can build the system with:
 
-```sh
+```bash
 cd custom
 sudo nix flake update
 ```
@@ -109,20 +109,64 @@ sudo nix flake update
 
 Rebuild the system with:
 
-```sh
+```bash
 sudo nixos-rebuild switch --flake .#custom
+```
+
+In the next time, you can use this helper command instead:
+
+```bash
+nix-switch nixos
 ```
 
 ### Home Manager
 
 For the first time, you need to initialize home manager with:
 
-```sh
+```bash
 nix run home-manager -- init --switch --flake .#custom
 ```
 
 Then, you can rebuild the user environment with:
 
-```sh
+```bash
 home-manager switch --flake .#custom -b backup
+```
+
+In the next time, you can use this helper command instead:
+
+```bash
+nix-switch home
+```
+
+### Nix develop
+
+You can enter a development environment with the following command.\
+`<flake>` is the path to the flake directory.
+
+```bash
+nix develop <flake_path>
+```
+
+For example, to enter the `typescript` environment, you can use the following command.
+
+```bash
+nix develop ~/.dotfiles/[username]/environments/typescript
+```
+
+Or, you can use the following helper command instead for the pre-defined environments.\
+`<environment>` is the name of one of the following: [latex, rust, typescript, typst].
+
+```bash
+develop <environment>
+```
+
+You can find more information on the topic in [Nix Development instructions](environments/README.md).
+
+## Configuring
+
+In order to access the configuration files, you can use the following command:
+
+```bash
+nix-edit custom
 ```
