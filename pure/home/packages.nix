@@ -26,6 +26,7 @@
     libreoffice
 
     ## Programming
+    vscode-fhs
     zed-editor
 
     ## System
