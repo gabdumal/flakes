@@ -1,7 +1,4 @@
 { ... }:
-let
-  vsCodeSettings = builtins.fromJSON (builtins.readFile ./files/.config/Code/User/settings.json);
-in
 {
 
   programs = {
@@ -19,7 +16,7 @@ in
       enable = true;
       enableUpdateCheck = false;
       mutableExtensionsDir = true;
-      userSettings = vsCodeSettings;
+      userSettings = ./files/.config/Code/User/settings.json;
     };
   };
 
