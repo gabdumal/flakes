@@ -159,7 +159,7 @@ nix run home-manager -- init --switch --flake ~/.dotfiles/[hostname]/custom#cust
 Then, you can rebuild the user environment with:
 
 ```bash
-home-manager switch --flake .#custom -b backup
+home-manager switch --flake ~/.dotfiles/[hostname]/custom#custom -b backup
 ```
 
 In the next time, you can use this helper command instead:

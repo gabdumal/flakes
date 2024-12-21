@@ -24,9 +24,6 @@
     nil
     nixpkgs-fmt
 
-    ### Jetbrains
-    jetbrains.idea-ultimate
-
     ## Shell
     fastfetch
     gnome-terminal
