@@ -118,12 +118,12 @@ imports = [
 
 ## Using
 
-Now, `cd` into the `custom` flake directory.
+Now, `cd` into the `[hostname]` directory.
 Then, you can build the system with:
 
 ```bash
-cd custom
-sudo nix flake update
+cd ..
+./update.sh
 ```
 
 ### NixOS
@@ -131,7 +131,7 @@ sudo nix flake update
 Rebuild the system with:
 
 ```bash
-sudo nixos-rebuild switch --flake .#custom
+sudo nixos-rebuild switch --flake ~/.dotfiles/[hostname]/custom#custom
 ```
 
 In the next time, you can use this helper command instead:
@@ -145,7 +145,7 @@ nix-switch nixos
 For the first time, you need to initialize home manager with:
 
 ```bash
-nix run home-manager -- init --switch --flake .#custom
+nix run home-manager -- init --switch --flake ~/.dotfiles/[hostname]/custom#custom
 ```
 
 Then, you can rebuild the user environment with:
@@ -198,8 +198,11 @@ From time to time, you may want to update the flake inputs.
 After entering the `custom` directory, you can use the following command:
 
 ```bash
-nix flake update
+cd ..
+./update.sh
 ```
+
+This will update the NixOS, the Home Manager and the environments inputs.
 
 Then, commit the changes to the repository.
 So you can run the `switch` command.
