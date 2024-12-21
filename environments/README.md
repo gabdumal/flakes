@@ -6,27 +6,7 @@ This repository contains my development environments for NixOS.
 
 You need to enable experimental features in your Nix configuration.
 
-The procedure to do that varies depending on your setup.
-
-If you are using NixOS, you can add the following to your `configuration.nix`:
-
-```nix
-{
-  #...
-
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-  #...
-}
-```
-
-Typically, you can find the `configuration.nix` file at `/etc/nixos/configuration.nix`.
-
-If you are using Nix on another system, you can add the following to your `nix.conf`:
-
-```nix
-experimental-features = nix-command flakes
-```
+Follow the same procedure as described in the [README.md](../README.md#setup) file.
 
 ## Installing
 

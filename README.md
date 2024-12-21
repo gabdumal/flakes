@@ -8,19 +8,27 @@ You need to enable experimental features in your Nix configuration.
 
 The procedure to do that varies depending on your setup.
 
-If you are using NixOS, you can add the following to your `configuration.nix`:
+Typically, you can find the `configuration.nix` file at `/etc/nixos/configuration.nix`.
+Open it to edit.
 
-```nix
-{
-  #...
-
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-  #...
-}
+```bash
+cd /etc/nixos
+sudo nano configuration.nix
 ```
 
-Typically, you can find the `configuration.nix` file at `/etc/nixos/configuration.nix`.
+If you are using NixOS, you can add the following to your `configuration.nix`, ate the end, before the last `}`:
+
+```nix
+nix.settings.experimental-features = [ "nix-command" "flakes" ];
+```
+
+Save and close the file by pressing `Ctrl + O` and then `Enter`, and then `Ctrl + X`.
+
+Then, rebuild the system with:
+
+```bash
+sudo nixos-rebuild switch
+```
 
 If you are using Nix on another system, you can add the following to your `nix.conf`:
 
@@ -29,6 +37,12 @@ experimental-features = nix-command flakes
 ```
 
 ## Installing
+
+You will need the `git` package to clone this repository.
+
+```bash
+nix-shell -p git
+```
 
 Clone this repository to your local machine.
 
@@ -74,6 +88,13 @@ Do **not** edit the contents of the `hardware-configuration.nix` file.
 It must be automatically generated.
 
 ## Custom definitions
+
+Open the `custom/flake.nix` file to edit.
+
+```bash
+cd ~/.dotfiles/[hostname]/custom
+nano flake.nix
+```
 
 Replace the following placeholders in the `custom/flake.nix` file with the appropriate values:
 
