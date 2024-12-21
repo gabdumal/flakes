@@ -44,7 +44,7 @@ You will need the `git` package to clone this repository.
 nix-shell -p git
 ```
 
-Clone this repository to your local machine.
+Clone the `custom` folder of this repository to your local machine.
 
 Personally, I like so set all my configuration in a directory named `.dotfiles` in my home directory.
 Then, clone the repository to a folder named after the hostname of the machine I am configuring.
