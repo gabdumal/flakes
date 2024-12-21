@@ -16,7 +16,7 @@
       enable = true;
       enableUpdateCheck = false;
       mutableExtensionsDir = true;
-      userSettings = ./files/.config/Code/User/settings.json;
+      # userSettings = ./files/.config/Code/User/settings.json;
     };
   };
 
