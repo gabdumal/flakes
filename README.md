@@ -116,11 +116,11 @@ imports = [
 
 ## Using
 
-Open the `custom` directory, so you can update the system with the following commands:
+Open the `[hostname]` directory, so you can update the system with the following commands:
 
 ```bash
-cd ~/.dotfiles/[hostname]/custom
-nix flake update
+cd ~/.dotfiles/[hostname]
+./update.sh
 ```
 
 Then, you have to configure this configuration folder as a repository.

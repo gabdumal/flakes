@@ -10,12 +10,9 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    catppuccin = {
-      url = "github:catppuccin/nix";
-    };
   };
 
-  outputs = { self, nixpkgs, home-manager, catppuccin, ... }:
+  outputs = { self, nixpkgs, home-manager, ... }:
     let
       system = "x86_64-linux";
     in
@@ -26,7 +23,6 @@
           inherit system;
 
           modules = [
-            catppuccin.nixosModules.catppuccin
             ./system/system.nix
           ];
         };
@@ -37,7 +33,6 @@
           pkgs = import nixpkgs { inherit system; };
 
           modules = [
-            catppuccin.homeManagerModules.catppuccin
             ./home/home.nix
           ];
         };
