@@ -10,6 +10,9 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    catppuccin = {
+      url = "github:catppuccin/nix";
+    };
     pure = {
       url = "github:gabdumal/flakes?dir=pure";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -17,7 +20,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, pure, ... } @ inputs:
+  outputs = { self, nixpkgs, home-manager, catppuccin, pure, ... } @ inputs:
     let
       system = "x86_64-linux";
       fullname = "[ Full Name ]";
@@ -39,6 +42,7 @@
           };
 
           modules = [
+            catppuccin.homeManagerModules.catppuccin
             "${pure}/system/system.nix"
             ./system/basic.nix
             ./system/system.nix
@@ -56,6 +60,7 @@
           };
 
           modules = [
+            catppuccin.homeManagerModules.catppuccin
             "${pure}/home/home.nix"
             ./home/basic.nix
             ./home/home.nix
