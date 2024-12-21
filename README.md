@@ -116,15 +116,14 @@ imports = [
 
 ## Using
 
-Now, `cd` into the `[hostname]` directory.
-Then, you can build the system with:
+Open the `custom` directory, so you can update the system with the following commands:
 
 ```bash
-cd ..
-./update.sh
+cd ~/.dotfiles/[hostname]/custom
+nix flake update
 ```
 
-Now, you have to configure this configuration folder as a repository.
+Then, you have to configure this configuration folder as a repository.
 Run the following commands to initialize the repository.
 Remember to replace `[Full Name]` and `[email]` with your full name and email.
 
@@ -213,11 +212,10 @@ Then, you can run the `switch` command.
 ### Updating
 
 From time to time, you may want to update the flake inputs.
-After entering the `custom` directory, you can use the following command:
+To do so, you can entre the `custom` directory, and use the following command:
 
 ```bash
-cd ..
-./update.sh
+nix flake update
 ```
 
 This will update the NixOS, the Home Manager and the environments inputs.
