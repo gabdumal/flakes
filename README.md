@@ -102,7 +102,8 @@ sudo cp /etc/nixos/hardware-configuration.nix ~/.dotfiles/nixos/custom/system/ha
 Commit the changes to the repository.
 
 ```bash
-git add ~/.dotfiles/nixos/custom/system/hardware-configuration.nix
+cd ~/.dotfiles/nixos/custom
+git add ./system/hardware-configuration.nix
 
 git commit -m "Add hardware configuration"
 ```

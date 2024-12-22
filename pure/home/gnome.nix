@@ -100,7 +100,7 @@
         };
         cursorBlinkMode = "system";
         cursorShape = "block";
-        default = lib.mkDefault true;
+        default = true;
         deleteBinding = "delete-sequence";
         font = "MesloLGS Nerd Font Mono 16";
         scrollOnOutput = true;
@@ -146,7 +146,7 @@
         };
         cursorBlinkMode = "system";
         cursorShape = "block";
-        default = lib.mkDefault false;
+        default = false;
         deleteBinding = "delete-sequence";
         font = "MesloLGS Nerd Font Mono 16";
         scrollOnOutput = true;
@@ -192,7 +192,7 @@
         };
         cursorBlinkMode = "system";
         cursorShape = "block";
-        default = lib.mkDefault false;
+        default = false;
         deleteBinding = "delete-sequence";
         font = "MesloLGS Nerd Font Mono 16";
         scrollOnOutput = true;
@@ -238,7 +238,7 @@
         };
         cursorBlinkMode = "system";
         cursorShape = "block";
-        default = lib.mkDefault false;
+        default = false;
         deleteBinding = "delete-sequence";
         font = "MesloLGS Nerd Font Mono 16";
         scrollOnOutput = true;
