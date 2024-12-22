@@ -63,6 +63,47 @@
     showMenubar = lib.mkDefault false;
     themeVariant = lib.mkDefault "system";
     profile = {
+      "3a45cd64-9b3f-4bd8-b00f-56fa19be9cce" = {
+        allowBold = true;
+        audibleBell = true;
+        backspaceBinding = "ascii-delete";
+        boldIsBright = false;
+        colors = {
+          backgroundColor = "#1A1A1D1D2323";
+          cursor = {
+            background = "#CACACCCCD3D3";
+            foreground = "#1A1A1D1D2323";
+          };
+          foregroundColor = "#9B9B9F9FA9A9";
+          palette = [
+            "#111113131717"
+            "#F8F874747E7E"
+            "#7575ADAD4747"
+            "#D0D092921414"
+            "#5050A4A4E9E9"
+            "#CCCC8383E3E3"
+            "#0000B2B29898"
+            "#ADADB0B0BBBB"
+            "#575761617676"
+            "#FAFAA5A5ABAB"
+            "#A5A5CDCD8484"
+            "#EFEFBDBD5858"
+            "#8D8DC3C3F1F1"
+            "#DEDEAEAEEDED"
+            "#2727FFFFDFDF"
+            "#CACACCCCD3D3"
+          ];
+        };
+        cursorBlinkMode = "system";
+        cursorShape = "block";
+        deleteBinding = "delete-sequence";
+        font = "MesloLGS Nerd Font Mono 16";
+        scrollOnOutput = true;
+        scrollbackLines = 10000;
+        showScrollbar = true;
+        transparencyPercent = 0;
+        visibleName = "Astrodark";
+      };
       de8a9081-8352-4ce4-9519-5de655ad9361 = {
         allowBold = true;
         audibleBell = true;
