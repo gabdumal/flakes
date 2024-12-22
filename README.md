@@ -16,7 +16,7 @@ cd /etc/nixos
 sudo nano configuration.nix
 ```
 
-If you are using NixOS, you can add the following to your `configuration.nix`, ate the end, before the last `}`:
+If you are using NixOS, you can add the following to your `configuration.nix`, at the end, before the last `}`:
 
 ```nix
 nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -44,23 +44,44 @@ You will need the `git` package to clone this repository.
 nix-shell -p git
 ```
 
-Clone the `custom` folder of this repository to your local machine.
-
 Personally, I like so set all my configuration in a directory named `.dotfiles` in my home directory.
-Then, clone the repository to a folder named after the hostname of the machine I am configuring.
+
+Clone the `custom` folder of this repository to a folder named after the hostname of the machine you are configuring.
 
 ```bash
 mkdir ~/.dotfiles
 cd ~/.dotfiles
-git clone https://github.com/gabdumal/flakes.git [hostname]
+git clone --no-checkout https://github.com/gabdumal/flakes.git nixos
+cd nixos
+git sparse-checkout init --cone
+git sparse-checkout set custom
+git checkout
 ```
 
-We will make changes only to the `custom` directory.
-Enter the folder you just cloned, and then the `custom` directory.
+Nix flakes must be saved into a repository.
+Configure a new one with the following commands.
 
 ```bash
-cd [hostname]
+cd ~/.dotfiles/nixos
+rm -rf .git
+rm flake.nix README.md update.sh
 cd custom
+git init
+git branch -m main
+git add .
+```
+
+Set your information in the repository.
+
+```bash
+git config user.name "[Full Name]"
+git config user.email "[email]"
+```
+
+Commit the changes.
+
+```bash
+git commit -m "Initialize Nix configuration"
 ```
 
 ## Hardware configuration
@@ -75,11 +96,15 @@ sudo nixos-generate-config
 Copy the file `hardware-configuration.nix` to the flake directory that you have cloned the repository to.
 
 ```bash
-sudo cp /etc/nixos/hardware-configuration.nix [path_of_the_flake_folder]/system/hardware-configuration.nix
+sudo cp /etc/nixos/hardware-configuration.nix ~/.dotfiles/nixos/custom/system/hardware-configuration.nix
+```
 
-# If you have followed the suggestion to clone the repository to `~/.dotfiles`, the command would be the following, replacing `[hostname]`:
+Commit the changes to the repository.
 
-sudo cp /etc/nixos/hardware-configuration.nix ~/.dotfiles/[hostname]/custom/system/hardware-configuration.nix
+```bash
+git add ~/.dotfiles/nixos/custom/system/hardware-configuration.nix
+
+git commit -m "Add hardware configuration"
 ```
 
 Do **not** edit the contents of the `hardware-configuration.nix` file.
@@ -90,7 +115,7 @@ It must be automatically generated.
 Open the `custom/flake.nix` file to edit.
 
 ```bash
-cd ~/.dotfiles/[hostname]/custom
+cd ~/.dotfiles/nixos/custom
 nano flake.nix
 ```
 
@@ -99,8 +124,10 @@ Replace the following placeholders in the `custom/flake.nix` file with the appro
 ```nix
   fullname = "[Full Name]";
   username = "[username]";
-  hostname = "[hostname]";
+  hostname = "nixos";
 ```
+
+## Using
 
 Do **not** edit the `custom/flake.nix` file directly, neither the `custom/configuration.nix`, the `custom/home/basic.nix` and the `custom/system/basic.nix` files.
 
@@ -114,32 +141,12 @@ imports = [
 ];
 ```
 
-## Using
-
-Open the `[hostname]` directory, so you can update the system with the following commands:
-
-```bash
-cd ~/.dotfiles/[hostname]
-./update.sh
-```
-
-Then, you have to configure this configuration folder as a repository.
-Run the following commands to initialize the repository.
-Remember to replace `[Full Name]` and `[email]` with your full name and email.
-
-```bash
-git config user.name "[Full Name]"
-git config user.email "[email]"
-git add .
-git commit -m "Initialize Nix configuration"
-```
-
 ### NixOS
 
 Rebuild the system with:
 
 ```bash
-sudo nixos-rebuild switch --flake ~/.dotfiles/[hostname]/custom#custom
+sudo nixos-rebuild switch --flake ~/.dotfiles/nixos/custom#custom
 ```
 
 In the next time, you can use this helper command instead:
@@ -153,13 +160,13 @@ nix-switch nixos
 For the first time, you need to initialize home manager with:
 
 ```bash
-nix run home-manager -- init --switch --flake ~/.dotfiles/[hostname]/custom#custom
+nix run home-manager -- init --switch --flake ~/.dotfiles/nixos/custom#custom
 ```
 
 Then, you can rebuild the user environment with:
 
 ```bash
-home-manager switch --flake ~/.dotfiles/[hostname]/custom#custom -b backup
+home-manager switch --flake ~/.dotfiles/nixos/custom#custom -b backup
 ```
 
 In the next time, you can use this helper command instead:
@@ -167,30 +174,6 @@ In the next time, you can use this helper command instead:
 ```bash
 nix-switch home
 ```
-
-### Nix develop
-
-You can enter a development environment with the following command.\
-`<flake>` is the path to the flake directory.
-
-```bash
-nix develop <flake_path>
-```
-
-For example, to enter the `typescript` environment, you can use the following command.
-
-```bash
-nix develop ~/.dotfiles/[username]/environments/typescript
-```
-
-Or, you can use the following helper command instead for the pre-defined environments.\
-`<environment>` is the name of one of the following: [latex, rust, typescript, typst].
-
-```bash
-develop <environment>
-```
-
-You can find more information on the topic in [Nix Development instructions](environments/README.md).
 
 ## Configuring
 
@@ -215,7 +198,7 @@ From time to time, you may want to update the flake inputs.
 To do so, you can entre the `custom` directory, and use the following command:
 
 ```bash
-cd ~/.dotfiles/[hostname]/custom
+cd ~/.dotfiles/nixos/custom
 nix flake update
 ```
 
@@ -224,10 +207,10 @@ This will update the NixOS, the Home Manager and the environments inputs.
 Then, commit the changes to the repository.
 So you can run the `switch` command.
 
-Or, you can use the `update` script to do that for you.
+Or, you can use the `update` script to do all that process to you.
 
 ```bash
-cd ~/.dotfiles/[hostname]/custom
+cd ~/.dotfiles/nixos/custom
 ./update.sh
 ```
 
