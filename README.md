@@ -5,7 +5,6 @@ This is a flake that contains my pure configuration for NixOS.
 ## Setup
 
 You need to enable experimental features in your Nix configuration.
-
 The procedure to do that varies depending on your setup.
 
 Typically, you can find the `configuration.nix` file at `/etc/nixos/configuration.nix`.
@@ -46,7 +45,7 @@ nix-shell -p git
 
 Personally, I like so set all my configuration in a directory named `.dotfiles` in my home directory.
 
-Clone the `custom` folder of this repository to a folder named after the hostname of the machine you are configuring.
+Create a folder named `nixos` in the `.dotfiles` directory, and clone the folder `custom` of this repository into it.
 
 ```bash
 mkdir ~/.dotfiles
@@ -64,7 +63,8 @@ Configure a new one with the following commands.
 ```bash
 cd ~/.dotfiles/nixos
 rm -rf .git
-rm flake.nix README.md update.sh
+rm flake.nim update.sh .gitignore
+mv README.md custom
 cd custom
 git init
 git branch -m main
