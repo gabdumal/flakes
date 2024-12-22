@@ -29,6 +29,7 @@
 
     ## Shell
     fastfetch
+    fzf
     gnome-terminal
     thefuck
 

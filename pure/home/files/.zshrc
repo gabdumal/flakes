@@ -45,11 +45,17 @@ nix-update-all() {
     $HOME/.dotfiles/nixos/custom/update.sh
 }
 
-# Programs
-## Rust
+## Programs
+### Rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# Theme
+## fzf
+if [ -n "${commands[fzf-share]}" ]; then
+  source "$(fzf-share)/key-bindings.zsh"
+  source "$(fzf-share)/completion.zsh"
+fi
+
+## Theme
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
     eval "$(oh-my-posh init zsh)"
 fi
