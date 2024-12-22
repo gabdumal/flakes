@@ -30,13 +30,13 @@ in
       };
 
       initExtra = ''
-        ### Pure InitExtra definitions
+        ### Pure Home InitExtra definitions
         ${zshConfig}
-        ### END Pure InitExtra definitions
+        ### END Pure Home InitExtra definitions
       '';
 
       shellAliases = {
-        # Zoxide
+        ## Zoxide
         cd = "z";
       };
     };
@@ -46,7 +46,6 @@ in
       enableZshIntegration = true;
     };
   };
-
 
   fonts = { };
 

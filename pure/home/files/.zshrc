@@ -1,5 +1,5 @@
-# Nix
-## Configuration
+## Nix
+### Configuration
 nix-edit() {
     case $1 in
         pure)
@@ -14,7 +14,7 @@ nix-edit() {
     esac
 }
 
-## Deployment
+### Deployment
 nix-switch() {
     case $1 in
         home)
@@ -32,7 +32,7 @@ nix-switch() {
 develop() {
     case $1 in
         c_cpp|java|latex|python|rust|typescript|typst)
-            env_path=~/.dotfiles/nixos/environments/$1
+            nix develop ~/.dotfiles/nixos/environments/$1
             ;;
         *)
             echo "Unknown environment: $1. Available: c_cpp, java, latex, python, rust, typescript, typst."
@@ -49,17 +49,19 @@ nix-update-all() {
 ### Rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
-## fzf
-if [ -n "${commands[fzf-share]}" ]; then
-  source "$(fzf-share)/key-bindings.zsh"
-  source "$(fzf-share)/completion.zsh"
-fi
+## Shell
 
-## Theme
+### Theme
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
     eval "$(oh-my-posh init zsh)"
 fi
 eval "$(oh-my-posh init zsh --config ~/.dotfiles/omp.json)"
 
-# Shell
+### fzf
+if [ -n "${commands[fzf-share]}" ]; then
+  source "$(fzf-share)/key-bindings.zsh"
+  source "$(fzf-share)/completion.zsh"
+fi
+
+### Fuck
 eval $(thefuck --alias)

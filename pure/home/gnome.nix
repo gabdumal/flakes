@@ -43,7 +43,7 @@
     "org/gnome/shell" = {
       disable-user-extensions = lib.mkDefault false;
       enabled-extensions = with pkgs.gnomeExtensions; [
-        rounded-window-corners-reborn.extensionUuid
+
       ];
       favorite-apps = [
         "firefox.desktop"
