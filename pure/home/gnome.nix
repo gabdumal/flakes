@@ -52,6 +52,7 @@
       ];
       last-selected-power-profile = lib.mkDefault "performance";
     };
+
     "org/gnome/shell/app-switcher" = {
       current-workspace-only = lib.mkDefault true;
     };

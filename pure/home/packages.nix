@@ -3,24 +3,15 @@
 
   home.packages = with pkgs; [
     ## GNOME
-    citations
-    collision
     dconf-editor
     eyedropper
-    hieroglyphic
-    lorem
     switcheroo
-    textpieces
-    wike
 
-    ## GNOME Extensions
-    gnomeExtensions.appindicator
-    gnomeExtensions.rounded-window-corners-reborn
+    ### Extensions
 
     ## Multimedia
     ffmpeg
     imagemagick
-    meld
 
     ## Office
     libreoffice
