@@ -3,19 +3,19 @@
 
   dconf.settings = {
     "org/gnome/desktop/interface" = {
-      color-scheme = "default";
-      enable-hot-corners = false;
-      gtk-theme = "adw-gtk3";
+      color-scheme = lib.mkDefault "default";
+      enable-hot-corners = lib.mkDefault false;
+      gtk-theme = lib.mkDefault "adw-gtk3";
     };
 
     "org/gnome/desktop/session" = {
-      idle-delay = lib.hm.gvariant.mkUint32 900;
+      idle-delay = lib.mkDefault (lib.hm.gvariant.mkUint32 900);
     };
 
     "org/gnome/mutter" = {
-      dynamic-workspaces = true;
-      edge-tiling = true;
-      workspaces-only-on-primary = true;
+      dynamic-workspaces = lib.mkDefault true;
+      edge-tiling = lib.mkDefault true;
+      workspaces-only-on-primary = lib.mkDefault true;
     };
 
     "org/gnome/settings-daemon/plugins/media-keys" = {
@@ -26,22 +26,22 @@
     };
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
-      name = "Terminal";
-      command = "gnome-terminal";
-      binding = "<Ctrl><Alt>t";
+      name = lib.mkDefault "Terminal";
+      command = lib.mkDefault "gnome-terminal";
+      binding = lib.mkDefault "<Ctrl><Alt>t";
     };
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
-      name = "System Monitor";
-      command = "gnome-system-monitor";
-      binding = "<Ctrl><Shift>Escape";
+      name = lib.mkDefault "System Monitor";
+      command = lib.mkDefault "gnome-system-monitor";
+      binding = lib.mkDefault "<Ctrl><Shift>Escape";
     };
 
     "org/gnome/settings-daemon/plugins/power" = {
-      sleep-inactive-ac-type = "blank";
+      sleep-inactive-ac-type = lib.mkDefault "blank";
     };
 
     "org/gnome/shell" = {
-      disable-user-extensions = false;
+      disable-user-extensions = lib.mkDefault false;
       enabled-extensions = with pkgs.gnomeExtensions; [
         rounded-window-corners-reborn.extensionUuid
       ];
@@ -50,17 +50,17 @@
         "code.desktop"
         "org.gnome.Nautilus.desktop"
       ];
-      last-selected-power-profile = "performance";
+      last-selected-power-profile = lib.mkDefault "performance";
     };
     "org/gnome/shell/app-switcher" = {
-      current-workspace-only = true;
+      current-workspace-only = lib.mkDefault true;
     };
   };
 
   programs.gnome-terminal = {
-    enable = true;
-    showMenubar = false;
-    themeVariant = "system";
+    enable = lib.mkDefault true;
+    showMenubar = lib.mkDefault false;
+    themeVariant = lib.mkDefault "system";
     profile = {
       de8a9081-8352-4ce4-9519-5de655ad9361 = {
         allowBold = true;
