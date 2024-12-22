@@ -6,7 +6,7 @@ nix-edit() {
             code $HOME/dev/flakes
             ;;
         custom)
-            code $HOME/.dotfiles/nixos/custom
+            code $HOME/.dotfiles/nixos
             ;;
         *)
             echo "Unknown flake: $1. Available: pure, custom."
@@ -18,10 +18,10 @@ nix-edit() {
 nix-switch() {
     case $1 in
         home)
-            home-manager switch -b backup --flake ~/.dotfiles/nixos/custom#custom
+            home-manager switch -b backup --flake ~/.dotfiles/nixos#custom
             ;;
         nixos)
-            sudo nixos-rebuild switch --flake ~/.dotfiles/nixos/custom#custom
+            sudo nixos-rebuild switch --flake ~/.dotfiles/nixos#custom
             ;;
         *)
             echo "Unknown system: $1. Available: home, nixos."
@@ -42,7 +42,7 @@ develop() {
 }
 
 nix-update-all() {
-    $HOME/.dotfiles/nixos/custom/update.sh
+    $HOME/.dotfiles/nixos/update.sh
 }
 
 # Programs
