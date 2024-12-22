@@ -4,6 +4,9 @@
   programs = {
     git = {
       enable = true;
+      configExtra = {
+        init.defaultBranch = "main";
+      };
     };
 
     noisetorch = {
