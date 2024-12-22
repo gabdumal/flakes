@@ -31,11 +31,11 @@ nix-switch() {
 
 develop() {
     case $1 in
-        rust|typescript|typst|latex)
+        c_cpp|java|latex|python|rust|typescript|typst)
             env_path=~/.dotfiles/nixos/environments/$1
             ;;
         *)
-            echo "Unknown environment: $1. Available: rust, typescript, typst, latex."
+            echo "Unknown environment: $1. Available: c_cpp, java, latex, python, rust, typescript, typst."
             exit 1
             ;;
     esac
