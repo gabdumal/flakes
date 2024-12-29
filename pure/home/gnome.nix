@@ -105,7 +105,7 @@
         scrollbackLines = lib.mkDefault 10000;
         showScrollbar = lib.mkDefault true;
         transparencyPercent = lib.mkDefault 0;
-        visibleName = lib.mkDefault "Astrodark";
+        visibleName = "Astrodark";
       };
 
       "4ea33fe1-309b-4c8c-ae48-b348d71637d9" = {
@@ -152,7 +152,7 @@
         scrollbackLines = lib.mkDefault 10000;
         showScrollbar = lib.mkDefault true;
         transparencyPercent = lib.mkDefault 0;
-        visibleName = lib.mkDefault "Kibble";
+        visibleName = "Kibble";
       };
 
       "5083e06b-024e-46be-9cd2-892b814f1fc8" = lib.mkDefault {
@@ -199,7 +199,7 @@
         scrollbackLines = lib.mkDefault 10000;
         showScrollbar = lib.mkDefault true;
         transparencyPercent = lib.mkDefault 0;
-        visibleName = lib.mkDefault "Catppuccin Macchiato";
+        visibleName = "Catppuccin Macchiato";
       };
 
       "71a9971e-e829-43a9-9b2f-4565c855d664" = lib.mkDefault {
@@ -245,7 +245,7 @@
         scrollbackLines = lib.mkDefault 10000;
         showScrollbar = lib.mkDefault true;
         transparencyPercent = lib.mkDefault 0;
-        visibleName = lib.mkDefault "Catppuccin Frappe";
+        visibleName = "Catppuccin Frappe";
       };
 
       "95894cfd-82f7-430d-af6e-84d168bc34f5" = lib.mkDefault {
@@ -291,7 +291,7 @@
         scrollbackLines = lib.mkDefault 10000;
         showScrollbar = lib.mkDefault true;
         transparencyPercent = lib.mkDefault 0;
-        visibleName = lib.mkDefault "Catppuccin Mocha";
+        visibleName = "Catppuccin Mocha";
       };
 
       de8a9081-8352-4ce4-9519-5de655ad9361 = lib.mkDefault {
@@ -337,7 +337,7 @@
         scrollbackLines = lib.mkDefault 10000;
         showScrollbar = lib.mkDefault true;
         transparencyPercent = lib.mkDefault 0;
-        visibleName = lib.mkDefault "Catppuccin Latte";
+        visibleName = "Catppuccin Latte";
       };
 
     };
