@@ -105,7 +105,7 @@
         scrollbackLines = lib.mkDefault 10000;
         showScrollbar = lib.mkDefault true;
         transparencyPercent = lib.mkDefault 0;
-        visibleName = "Astrodark";
+        visibleName = lib.mkDefault "Astrodark";
       };
 
       "4ea33fe1-309b-4c8c-ae48-b348d71637d9" = {
@@ -152,10 +152,10 @@
         scrollbackLines = lib.mkDefault 10000;
         showScrollbar = lib.mkDefault true;
         transparencyPercent = lib.mkDefault 0;
-        visibleName = "Kibble";
+        visibleName = lib.mkDefault "Kibble";
       };
 
-      "5083e06b-024e-46be-9cd2-892b814f1fc8" = lib.mkDefault {
+      "5083e06b-024e-46be-9cd2-892b814f1fc8" = {
         allowBold = lib.mkDefault true;
         audibleBell = lib.mkDefault true;
         backspaceBinding = lib.mkDefault "ascii-delete";
@@ -199,10 +199,10 @@
         scrollbackLines = lib.mkDefault 10000;
         showScrollbar = lib.mkDefault true;
         transparencyPercent = lib.mkDefault 0;
-        visibleName = "Catppuccin Macchiato";
+        visibleName = lib.mkDefault "Catppuccin Macchiato";
       };
 
-      "71a9971e-e829-43a9-9b2f-4565c855d664" = lib.mkDefault {
+      "71a9971e-e829-43a9-9b2f-4565c855d664" = {
         allowBold = lib.mkDefault true;
         audibleBell = lib.mkDefault true;
         backspaceBinding = lib.mkDefault "ascii-delete";
@@ -245,10 +245,10 @@
         scrollbackLines = lib.mkDefault 10000;
         showScrollbar = lib.mkDefault true;
         transparencyPercent = lib.mkDefault 0;
-        visibleName = "Catppuccin Frappe";
+        visibleName = lib.mkDefault "Catppuccin Frappe";
       };
 
-      "95894cfd-82f7-430d-af6e-84d168bc34f5" = lib.mkDefault {
+      "95894cfd-82f7-430d-af6e-84d168bc34f5" = {
         allowBold = lib.mkDefault true;
         audibleBell = lib.mkDefault true;
         backspaceBinding = lib.mkDefault "ascii-delete";
@@ -291,10 +291,10 @@
         scrollbackLines = lib.mkDefault 10000;
         showScrollbar = lib.mkDefault true;
         transparencyPercent = lib.mkDefault 0;
-        visibleName = "Catppuccin Mocha";
+        visibleName = lib.mkDefault "Catppuccin Mocha";
       };
 
-      de8a9081-8352-4ce4-9519-5de655ad9361 = lib.mkDefault {
+      de8a9081-8352-4ce4-9519-5de655ad9361 = {
         allowBold = lib.mkDefault true;
         audibleBell = lib.mkDefault true;
         backspaceBinding = lib.mkDefault "ascii-delete";
@@ -337,7 +337,7 @@
         scrollbackLines = lib.mkDefault 10000;
         showScrollbar = lib.mkDefault true;
         transparencyPercent = lib.mkDefault 0;
-        visibleName = "Catppuccin Latte";
+        visibleName = lib.mkDefault "Catppuccin Latte";
       };
 
     };
