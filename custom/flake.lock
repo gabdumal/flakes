@@ -47,11 +47,11 @@
       },
       "locked": {
         "dir": "pure",
-        "lastModified": 1734892348,
-        "narHash": "sha256-4llHd4vAX03+5j1Jnn1t2oh3iD2AhOqbnPrSiVLxp/0=",
+        "lastModified": 1735432372,
+        "narHash": "sha256-ueZ0gwET78yJiUmLTlZY6N2e7liw/P2iCUogYDUT9EM=",
         "owner": "gabdumal",
         "repo": "flakes",
-        "rev": "2307ea6bfbb051cbc3ae51e1209c7a67f91af55d",
+        "rev": "0d7620900b2c6c3e72910bedd6c84038dbbcb71e",
         "type": "github"
       },
       "original": {
