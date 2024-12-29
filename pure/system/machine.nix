@@ -1,28 +1,28 @@
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
 {
 
   ## Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.systemd-boot.enable = lib.mkDefault true;
+  boot.loader.efi.canTouchEfiVariables = lib.mkDefault true;
 
   ## Kernel
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = lib.mkDefault pkgs.linuxPackages_latest;
 
   ## Filesystems
-  boot.supportedFilesystems = [ "ntfs" ];
+  boot.supportedFilesystems = lib.mkDefault [ "ntfs" ];
 
   ## Hardware configuration
-  hardware.enableAllFirmware = true;
-  hardware.enableRedistributableFirmware = true;
-  hardware.graphics.enable = true; # when using QEMU KVM
+  hardware.enableAllFirmware = lib.mkDefault true;
+  hardware.enableRedistributableFirmware = lib.mkDefault true;
+  hardware.graphics.enable = lib.mkDefault true; # when using QEMU KVM
 
   ## Power management for laptops
-  powerManagement.enable = true;
+  powerManagement.enable = lib.mkDefault true;
 
   ## Time
   ### Set your time zone.
-  time.timeZone = "America/Sao_Paulo";
+  time.timeZone = lib.mkDefault "America/Sao_Paulo";
   ### Use time according to the timezone. This prevents problems with dual-booting.
-  time.hardwareClockInLocalTime = true;
+  time.hardwareClockInLocalTime = lib.mkDefault false;
 
 }

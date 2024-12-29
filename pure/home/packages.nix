@@ -4,8 +4,6 @@
   home.packages = with pkgs; [
     ## GNOME
     dconf-editor
-    eyedropper
-    switcheroo
 
     ## Multimedia
     imagemagick
