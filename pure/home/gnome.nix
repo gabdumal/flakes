@@ -20,7 +20,7 @@
     };
 
     "org/gnome/settings-daemon/plugins/media-keys" = {
-      custom-keybindings = [
+      custom-keybindings = lib.mkDefault [
         "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
         "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
       ];
@@ -45,7 +45,7 @@
       disable-user-extensions = lib.mkDefault false;
       enabled-extensions = with pkgs.gnomeExtensions; [
       ];
-      favorite-apps = [
+      favorite-apps = lib.mkDefault [
         "firefox.desktop"
         "code.desktop"
         "org.gnome.Nautilus.desktop"
@@ -66,19 +66,19 @@
     profile = {
 
       "3a45cd64-9b3f-4bd8-b00f-56fa19be9cce" = {
-        allowBold = true;
-        audibleBell = true;
-        backspaceBinding = "ascii-delete";
-        boldIsBright = false;
-        colors = {
-          backgroundColor = "#1A1A1D1D2323";
-          boldColor = "#9B9B9F9FA9A9";
-          cursor = {
-            background = "#CACACCCCD3D3";
-            foreground = "#1A1A1D1D2323";
+        allowBold = lib.mkDefault true;
+        audibleBell = lib.mkDefault true;
+        backspaceBinding = lib.mkDefault "ascii-delete";
+        boldIsBright = lib.mkDefault false;
+        colors = lib.mkDefault {
+          backgroundColor = lib.mkDefault "#1A1A1D1D2323";
+          boldColor = lib.mkDefault "#9B9B9F9FA9A9";
+          cursor = lib.mkDefault {
+            background = lib.mkDefault "#CACACCCCD3D3";
+            foreground = lib.mkDefault "#1A1A1D1D2323";
           };
-          foregroundColor = "#9B9B9F9FA9A9";
-          palette = [
+          foregroundColor = lib.mkDefault "#9B9B9F9FA9A9";
+          palette = lib.mkDefault [
             "#111113131717"
             "#F8F874747E7E"
             "#7575ADAD4747"
@@ -97,35 +97,35 @@
             "#CACACCCCD3D3"
           ];
         };
-        cursorBlinkMode = "system";
-        cursorShape = "block";
-        deleteBinding = "delete-sequence";
+        cursorBlinkMode = lib.mkDefault "system";
+        cursorShape = lib.mkDefault "block";
+        deleteBinding = lib.mkDefault "delete-sequence";
         font = lib.mkDefault "MesloLGL Nerd Font Mono 16";
-        scrollOnOutput = true;
-        scrollbackLines = 10000;
-        showScrollbar = true;
-        transparencyPercent = 0;
-        visibleName = "Astrodark";
+        scrollOnOutput = lib.mkDefault true;
+        scrollbackLines = lib.mkDefault 10000;
+        showScrollbar = lib.mkDefault true;
+        transparencyPercent = lib.mkDefault 0;
+        visibleName = lib.mkDefault "Astrodark";
       };
 
       "4ea33fe1-309b-4c8c-ae48-b348d71637d9" = {
-        allowBold = true;
-        audibleBell = true;
-        backspaceBinding = "ascii-delete";
-        boldIsBright = false;
-        colors = {
-          backgroundColor = "#0E0E10100A0A";
-          boldColor = "#F7F7F7F7F7F7";
-          cursor = {
-            background = "#F7F7F7F7F7F7";
-            foreground = "#0E0E10100A0A";
+        allowBold = lib.mkDefault true;
+        audibleBell = lib.mkDefault true;
+        backspaceBinding = lib.mkDefault "ascii-delete";
+        boldIsBright = lib.mkDefault false;
+        colors = lib.mkDefault {
+          backgroundColor = lib.mkDefault "#0E0E10100A0A";
+          boldColor = lib.mkDefault "#F7F7F7F7F7F7";
+          cursor = lib.mkDefault {
+            background = lib.mkDefault "#F7F7F7F7F7F7";
+            foreground = lib.mkDefault "#0E0E10100A0A";
           };
-          foregroundColor = "#F7F7F7F7F7F7";
-          highlight = {
-            background = "#dc8a78";
-            foreground = "#4c4f69";
+          foregroundColor = lib.mkDefault "#F7F7F7F7F7F7";
+          highlight = lib.mkDefault {
+            background = lib.mkDefault "#dc8a78";
+            foreground = lib.mkDefault "#4c4f69";
           };
-          palette = [
+          palette = lib.mkDefault [
             "#4D4D4D4D4D4D"
             "#C7C700003131"
             "#2929CFCF1313"
@@ -144,35 +144,35 @@
             "#FFFFFFFFFFFF"
           ];
         };
-        cursorBlinkMode = "system";
-        cursorShape = "block";
-        deleteBinding = "delete-sequence";
+        cursorBlinkMode = lib.mkDefault "system";
+        cursorShape = lib.mkDefault "block";
+        deleteBinding = lib.mkDefault "delete-sequence";
         font = lib.mkDefault "MesloLGL Nerd Font Mono 16";
-        scrollOnOutput = true;
-        scrollbackLines = 10000;
-        showScrollbar = true;
-        transparencyPercent = 0;
-        visibleName = "Kibble";
+        scrollOnOutput = lib.mkDefault true;
+        scrollbackLines = lib.mkDefault 10000;
+        showScrollbar = lib.mkDefault true;
+        transparencyPercent = lib.mkDefault 0;
+        visibleName = lib.mkDefault "Kibble";
       };
 
-      "5083e06b-024e-46be-9cd2-892b814f1fc8" = {
-        allowBold = true;
-        audibleBell = true;
-        backspaceBinding = "ascii-delete";
-        boldIsBright = false;
-        colors = {
-          backgroundColor = "#24273a";
-          boldColor = "#cad3f5";
-          cursor = {
-            background = "#f4dbd6";
-            foreground = "#24273a";
+      "5083e06b-024e-46be-9cd2-892b814f1fc8" = lib.mkDefault {
+        allowBold = lib.mkDefault true;
+        audibleBell = lib.mkDefault true;
+        backspaceBinding = lib.mkDefault "ascii-delete";
+        boldIsBright = lib.mkDefault false;
+        colors = lib.mkDefault {
+          backgroundColor = lib.mkDefault "#24273a";
+          boldColor = lib.mkDefault "#cad3f5";
+          cursor = lib.mkDefault {
+            background = lib.mkDefault "#f4dbd6";
+            foreground = lib.mkDefault "#24273a";
           };
-          foregroundColor = "#cad3f5";
-          highlight = {
-            background = "#f4dbd6";
-            foreground = "#5b6078";
+          foregroundColor = lib.mkDefault "#cad3f5";
+          highlight = lib.mkDefault {
+            background = lib.mkDefault "#f4dbd6";
+            foreground = lib.mkDefault "#5b6078";
           };
-          palette = [
+          palette = lib.mkDefault [
             "#494d64"
             "#ed8796"
             "#a6da95"
@@ -191,34 +191,34 @@
             "#b8c0e0"
           ];
         };
-        cursorBlinkMode = "system";
-        cursorShape = "block";
-        deleteBinding = "delete-sequence";
+        cursorBlinkMode = lib.mkDefault "system";
+        cursorShape = lib.mkDefault "block";
+        deleteBinding = lib.mkDefault "delete-sequence";
         font = lib.mkDefault "MesloLGL Nerd Font Mono 16";
-        scrollOnOutput = true;
-        scrollbackLines = 10000;
-        showScrollbar = true;
-        transparencyPercent = 0;
-        visibleName = "Catppuccin Macchiato";
+        scrollOnOutput = lib.mkDefault true;
+        scrollbackLines = lib.mkDefault 10000;
+        showScrollbar = lib.mkDefault true;
+        transparencyPercent = lib.mkDefault 0;
+        visibleName = lib.mkDefault "Catppuccin Macchiato";
       };
 
-      "71a9971e-e829-43a9-9b2f-4565c855d664" = {
-        allowBold = true;
-        audibleBell = true;
-        backspaceBinding = "ascii-delete";
-        boldIsBright = false;
-        colors = {
-          backgroundColor = "#303446";
-          cursor = {
-            background = "#f2d5cf";
-            foreground = "#303446";
+      "71a9971e-e829-43a9-9b2f-4565c855d664" = lib.mkDefault {
+        allowBold = lib.mkDefault true;
+        audibleBell = lib.mkDefault true;
+        backspaceBinding = lib.mkDefault "ascii-delete";
+        boldIsBright = lib.mkDefault false;
+        colors = lib.mkDefault {
+          backgroundColor = lib.mkDefault "#303446";
+          cursor = lib.mkDefault {
+            background = lib.mkDefault "#f2d5cf";
+            foreground = lib.mkDefault "#303446";
           };
-          foregroundColor = "#c6d0f5";
-          highlight = {
-            background = "#f2d5cf";
-            foreground = "#626880";
+          foregroundColor = lib.mkDefault "#c6d0f5";
+          highlight = lib.mkDefault {
+            background = lib.mkDefault "#f2d5cf";
+            foreground = lib.mkDefault "#626880";
           };
-          palette = [
+          palette = lib.mkDefault [
             "#51576d"
             "#e78284"
             "#a6d189"
@@ -237,34 +237,34 @@
             "#b5bfe2"
           ];
         };
-        cursorBlinkMode = "system";
-        cursorShape = "block";
-        deleteBinding = "delete-sequence";
+        cursorBlinkMode = lib.mkDefault "system";
+        cursorShape = lib.mkDefault "block";
+        deleteBinding = lib.mkDefault "delete-sequence";
         font = lib.mkDefault "MesloLGL Nerd Font Mono 16";
-        scrollOnOutput = true;
-        scrollbackLines = 10000;
-        showScrollbar = true;
-        transparencyPercent = 0;
-        visibleName = "Catppuccin Frappe";
+        scrollOnOutput = lib.mkDefault true;
+        scrollbackLines = lib.mkDefault 10000;
+        showScrollbar = lib.mkDefault true;
+        transparencyPercent = lib.mkDefault 0;
+        visibleName = lib.mkDefault "Catppuccin Frappe";
       };
 
-      "95894cfd-82f7-430d-af6e-84d168bc34f5" = {
-        allowBold = true;
-        audibleBell = true;
-        backspaceBinding = "ascii-delete";
-        boldIsBright = false;
-        colors = {
-          backgroundColor = "#1e1e2e";
-          cursor = {
-            background = "#f5e0dc";
-            foreground = "#1e1e2e";
+      "95894cfd-82f7-430d-af6e-84d168bc34f5" = lib.mkDefault {
+        allowBold = lib.mkDefault true;
+        audibleBell = lib.mkDefault true;
+        backspaceBinding = lib.mkDefault "ascii-delete";
+        boldIsBright = lib.mkDefault false;
+        colors = lib.mkDefault {
+          backgroundColor = lib.mkDefault "#1e1e2e";
+          cursor = lib.mkDefault {
+            background = lib.mkDefault "#f5e0dc";
+            foreground = lib.mkDefault "#1e1e2e";
           };
-          foregroundColor = "#cdd6f4";
-          highlight = {
-            background = "#f5e0dc";
-            foreground = "#585b70";
+          foregroundColor = lib.mkDefault "#cdd6f4";
+          highlight = lib.mkDefault {
+            background = lib.mkDefault "#f5e0dc";
+            foreground = lib.mkDefault "#585b70";
           };
-          palette = [
+          palette = lib.mkDefault [
             "#45475a"
             "#f38ba8"
             "#a6e3a1"
@@ -283,34 +283,34 @@
             "#bac2de"
           ];
         };
-        cursorBlinkMode = "system";
-        cursorShape = "block";
-        deleteBinding = "delete-sequence";
+        cursorBlinkMode = lib.mkDefault "system";
+        cursorShape = lib.mkDefault "block";
+        deleteBinding = lib.mkDefault "delete-sequence";
         font = lib.mkDefault "MesloLGL Nerd Font Mono 16";
-        scrollOnOutput = true;
-        scrollbackLines = 10000;
-        showScrollbar = true;
-        transparencyPercent = 0;
-        visibleName = "Catppuccin Mocha";
+        scrollOnOutput = lib.mkDefault true;
+        scrollbackLines = lib.mkDefault 10000;
+        showScrollbar = lib.mkDefault true;
+        transparencyPercent = lib.mkDefault 0;
+        visibleName = lib.mkDefault "Catppuccin Mocha";
       };
 
-      de8a9081-8352-4ce4-9519-5de655ad9361 = {
-        allowBold = true;
-        audibleBell = true;
-        backspaceBinding = "ascii-delete";
-        boldIsBright = false;
-        colors = {
-          backgroundColor = "#eff1f5";
-          cursor = {
-            background = "#dc8a78";
-            foreground = "#eff1f5";
+      de8a9081-8352-4ce4-9519-5de655ad9361 = lib.mkDefault {
+        allowBold = lib.mkDefault true;
+        audibleBell = lib.mkDefault true;
+        backspaceBinding = lib.mkDefault "ascii-delete";
+        boldIsBright = lib.mkDefault false;
+        colors = lib.mkDefault {
+          backgroundColor = lib.mkDefault "#eff1f5";
+          cursor = lib.mkDefault {
+            background = lib.mkDefault "#dc8a78";
+            foreground = lib.mkDefault "#eff1f5";
           };
-          foregroundColor = "#4c4f69";
-          highlight = {
-            background = "#dc8a78";
-            foreground = "#4c4f69";
+          foregroundColor = lib.mkDefault "#4c4f69";
+          highlight = lib.mkDefault {
+            background = lib.mkDefault "#dc8a78";
+            foreground = lib.mkDefault "#4c4f69";
           };
-          palette = [
+          palette = lib.mkDefault [
             "#5c5f77"
             "#d20f39"
             "#40a02b"
@@ -329,15 +329,15 @@
             "#bcc0cc"
           ];
         };
-        cursorBlinkMode = "system";
-        cursorShape = "block";
-        deleteBinding = "delete-sequence";
+        cursorBlinkMode = lib.mkDefault "system";
+        cursorShape = lib.mkDefault "block";
+        deleteBinding = lib.mkDefault "delete-sequence";
         font = lib.mkDefault "MesloLGL Nerd Font Mono 16";
-        scrollOnOutput = true;
-        scrollbackLines = 10000;
-        showScrollbar = true;
-        transparencyPercent = 0;
-        visibleName = "Catppuccin Latte";
+        scrollOnOutput = lib.mkDefault true;
+        scrollbackLines = lib.mkDefault 10000;
+        showScrollbar = lib.mkDefault true;
+        transparencyPercent = lib.mkDefault 0;
+        visibleName = lib.mkDefault "Catppuccin Latte";
       };
 
     };
