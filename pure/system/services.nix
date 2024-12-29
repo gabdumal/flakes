@@ -12,6 +12,20 @@
       powerKeyLongPress = "poweroff";
     };
 
+    auto-cpufreq = {
+      enable = true;
+      settings = {
+        battery = {
+          governor = "powersave";
+          turbo = "never";
+        };
+        charger = {
+          governor = "performance";
+          turbo = "auto";
+        };
+      };
+    };
+
     udev = {
       packages = with pkgs; [ gnome-settings-daemon ];
     };

@@ -15,6 +15,9 @@
   hardware.enableAllFirmware = true;
   hardware.enableRedistributableFirmware = true;
 
+  ## Power management for laptops
+  powerManagement.enable = true;
+
   ## Time
   ### Set your time zone.
   time.timeZone = "America/Sao_Paulo";

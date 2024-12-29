@@ -44,7 +44,6 @@
     "org/gnome/shell" = {
       disable-user-extensions = lib.mkDefault false;
       enabled-extensions = with pkgs.gnomeExtensions; [
-
       ];
       favorite-apps = [
         "firefox.desktop"
@@ -101,14 +100,14 @@
         cursorBlinkMode = "system";
         cursorShape = "block";
         deleteBinding = "delete-sequence";
-        font = "MartianMono Nerd Font Mono 16";
+        font = lib.mkDefault "MesloLGL Nerd Font Mono 16";
         scrollOnOutput = true;
         scrollbackLines = 10000;
         showScrollbar = true;
         transparencyPercent = 0;
         visibleName = "Astrodark";
       };
-      
+
       "4ea33fe1-309b-4c8c-ae48-b348d71637d9" = {
         allowBold = true;
         audibleBell = true;
@@ -148,7 +147,7 @@
         cursorBlinkMode = "system";
         cursorShape = "block";
         deleteBinding = "delete-sequence";
-        font = "MartianMono Nerd Font Mono 16";
+        font = lib.mkDefault "MesloLGL Nerd Font Mono 16";
         scrollOnOutput = true;
         scrollbackLines = 10000;
         showScrollbar = true;
@@ -195,7 +194,7 @@
         cursorBlinkMode = "system";
         cursorShape = "block";
         deleteBinding = "delete-sequence";
-        font = "MartianMono Nerd Font Mono 16";
+        font = lib.mkDefault "MesloLGL Nerd Font Mono 16";
         scrollOnOutput = true;
         scrollbackLines = 10000;
         showScrollbar = true;
@@ -241,7 +240,7 @@
         cursorBlinkMode = "system";
         cursorShape = "block";
         deleteBinding = "delete-sequence";
-        font = "MartianMono Nerd Font Mono 16";
+        font = lib.mkDefault "MesloLGL Nerd Font Mono 16";
         scrollOnOutput = true;
         scrollbackLines = 10000;
         showScrollbar = true;
@@ -287,7 +286,7 @@
         cursorBlinkMode = "system";
         cursorShape = "block";
         deleteBinding = "delete-sequence";
-        font = "MartianMono Nerd Font Mono 16";
+        font = lib.mkDefault "MesloLGL Nerd Font Mono 16";
         scrollOnOutput = true;
         scrollbackLines = 10000;
         showScrollbar = true;
@@ -333,7 +332,7 @@
         cursorBlinkMode = "system";
         cursorShape = "block";
         deleteBinding = "delete-sequence";
-        font = "MartianMono Nerd Font Mono 16";
+        font = lib.mkDefault "MesloLGL Nerd Font Mono 16";
         scrollOnOutput = true;
         scrollbackLines = 10000;
         showScrollbar = true;

@@ -21,8 +21,6 @@
   environment.systemPackages = with pkgs; [
     ## Multimedia
     ffmpeg
-    imagemagick
-    qbittorrent
 
     ## Nix
     appimage-run

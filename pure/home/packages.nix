@@ -7,6 +7,10 @@
     eyedropper
     switcheroo
 
+    ## Multimedia
+    imagemagick
+    qbittorrent
+
     ## Office
     libreoffice
 
