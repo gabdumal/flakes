@@ -102,7 +102,7 @@
         cursorBlinkMode = lib.mkDefault "system";
         cursorShape = lib.mkDefault "block";
         deleteBinding = lib.mkDefault "delete-sequence";
-        font = lib.mkDefault "MesloLGL Nerd Font Mono 16";
+        font = lib.mkDefault "MesloLGS Nerd Font Mono 16";
         scrollOnOutput = lib.mkDefault true;
         scrollbackLines = lib.mkDefault 10000;
         showScrollbar = lib.mkDefault true;
@@ -149,7 +149,7 @@
         cursorBlinkMode = lib.mkDefault "system";
         cursorShape = lib.mkDefault "block";
         deleteBinding = lib.mkDefault "delete-sequence";
-        font = lib.mkDefault "MesloLGL Nerd Font Mono 16";
+        font = lib.mkDefault "MesloLGS Nerd Font Mono 16";
         scrollOnOutput = lib.mkDefault true;
         scrollbackLines = lib.mkDefault 10000;
         showScrollbar = lib.mkDefault true;
@@ -196,7 +196,7 @@
         cursorBlinkMode = lib.mkDefault "system";
         cursorShape = lib.mkDefault "block";
         deleteBinding = lib.mkDefault "delete-sequence";
-        font = lib.mkDefault "MesloLGL Nerd Font Mono 16";
+        font = lib.mkDefault "MesloLGS Nerd Font Mono 16";
         scrollOnOutput = lib.mkDefault true;
         scrollbackLines = lib.mkDefault 10000;
         showScrollbar = lib.mkDefault true;
@@ -242,7 +242,7 @@
         cursorBlinkMode = lib.mkDefault "system";
         cursorShape = lib.mkDefault "block";
         deleteBinding = lib.mkDefault "delete-sequence";
-        font = lib.mkDefault "MesloLGL Nerd Font Mono 16";
+        font = lib.mkDefault "MesloLGS Nerd Font Mono 16";
         scrollOnOutput = lib.mkDefault true;
         scrollbackLines = lib.mkDefault 10000;
         showScrollbar = lib.mkDefault true;
@@ -288,7 +288,7 @@
         cursorBlinkMode = lib.mkDefault "system";
         cursorShape = lib.mkDefault "block";
         deleteBinding = lib.mkDefault "delete-sequence";
-        font = lib.mkDefault "MesloLGL Nerd Font Mono 16";
+        font = lib.mkDefault "MesloLGS Nerd Font Mono 16";
         scrollOnOutput = lib.mkDefault true;
         scrollbackLines = lib.mkDefault 10000;
         showScrollbar = lib.mkDefault true;
@@ -334,7 +334,7 @@
         cursorBlinkMode = lib.mkDefault "system";
         cursorShape = lib.mkDefault "block";
         deleteBinding = lib.mkDefault "delete-sequence";
-        font = lib.mkDefault "MesloLGL Nerd Font Mono 16";
+        font = lib.mkDefault "MesloLGS Nerd Font Mono 16";
         scrollOnOutput = lib.mkDefault true;
         scrollbackLines = lib.mkDefault 10000;
         showScrollbar = lib.mkDefault true;
