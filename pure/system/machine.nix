@@ -17,7 +17,7 @@
   hardware.graphics.enable = true; # when using QEMU KVM
 
   ## Power management for laptops
-  # powerManagement.enable = true;
+  powerManagement.enable = true;
 
   ## Time
   ### Set your time zone.
