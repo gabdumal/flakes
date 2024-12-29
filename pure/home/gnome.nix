@@ -67,6 +67,7 @@
         allowBold = true;
         audibleBell = true;
         backspaceBinding = "ascii-delete";
+        boldColor = "#9B9B9F9FA9A9";
         boldIsBright = false;
         colors = {
           backgroundColor = "#1A1A1D1D2323";
@@ -104,39 +105,40 @@
         transparencyPercent = 0;
         visibleName = "Astrodark";
       };
-      de8a9081-8352-4ce4-9519-5de655ad9361 = {
+      "4ea33fe1-309b-4c8c-ae48-b348d71637d9" = {
         allowBold = true;
         audibleBell = true;
         backspaceBinding = "ascii-delete";
+        boldColor = "#F7F7F7F7F7F7";
         boldIsBright = false;
         colors = {
-          backgroundColor = "#eff1f5";
+          backgroundColor = "#0E0E10100A0A";
           cursor = {
-            background = "#dc8a78";
-            foreground = "#eff1f5";
+            background = "#F7F7F7F7F7F7";
+            foreground = "#0E0E10100A0A";
           };
-          foregroundColor = "#4c4f69";
+          foregroundColor = "#F7F7F7F7F7F7";
           highlight = {
             background = "#dc8a78";
             foreground = "#4c4f69";
           };
           palette = [
-            "#5c5f77"
-            "#d20f39"
-            "#40a02b"
-            "#df8e1d"
-            "#1e66f5"
-            "#ea76cb"
-            "#179299"
-            "#acb0be"
-            "#6c6f85"
-            "#d20f39"
-            "#40a02b"
-            "#df8e1d"
-            "#1e66f5"
-            "#ea76cb"
-            "#179299"
-            "#bcc0cc"
+            "#4D4D4D4D4D4D"
+            "#C7C700003131"
+            "#2929CFCF1313"
+            "#D8D8E3E30E0E"
+            "#34344949D1D1"
+            "#84840000FFFF"
+            "#07079898ABAB"
+            "#E2E2D1D1E3E3"
+            "#5A5A5A5A5A5A"
+            "#F0F015157878"
+            "#6C6CE0E05C5C"
+            "#F3F3F7F79E9E"
+            "#9797A4A4F7F7"
+            "#C4C49595F0F0"
+            "#6868F2F2E0E0"
+            "#FFFFFFFFFFFF"
           ];
         };
         cursorBlinkMode = "system";
@@ -147,52 +149,7 @@
         scrollbackLines = 10000;
         showScrollbar = true;
         transparencyPercent = 0;
-        visibleName = "Catppuccin Latte";
-      };
-      "71a9971e-e829-43a9-9b2f-4565c855d664" = {
-        allowBold = true;
-        audibleBell = true;
-        backspaceBinding = "ascii-delete";
-        boldIsBright = false;
-        colors = {
-          backgroundColor = "#303446";
-          cursor = {
-            background = "#f2d5cf";
-            foreground = "#303446";
-          };
-          foregroundColor = "#c6d0f5";
-          highlight = {
-            background = "#f2d5cf";
-            foreground = "#626880";
-          };
-          palette = [
-            "#51576d"
-            "#e78284"
-            "#a6d189"
-            "#e5c890"
-            "#8caaee"
-            "#f4b8e4"
-            "#81c8be"
-            "#a5adce"
-            "#626880"
-            "#e67172"
-            "#8ec772"
-            "#d9ba73"
-            "#7b9ef0"
-            "#f2a4db"
-            "#5abfb5"
-            "#b5bfe2"
-          ];
-        };
-        cursorBlinkMode = "system";
-        cursorShape = "block";
-        deleteBinding = "delete-sequence";
-        font = "MesloLGS Nerd Font Mono 16";
-        scrollOnOutput = true;
-        scrollbackLines = 10000;
-        showScrollbar = true;
-        transparencyPercent = 0;
-        visibleName = "Catppuccin Frappe";
+        visibleName = "Kibble";
       };
       "5083e06b-024e-46be-9cd2-892b814f1fc8" = {
         allowBold = true;
@@ -239,6 +196,51 @@
         transparencyPercent = 0;
         visibleName = "Catppuccin Macchiato";
       };
+      "71a9971e-e829-43a9-9b2f-4565c855d664" = {
+        allowBold = true;
+        audibleBell = true;
+        backspaceBinding = "ascii-delete";
+        boldIsBright = false;
+        colors = {
+          backgroundColor = "#303446";
+          cursor = {
+            background = "#f2d5cf";
+            foreground = "#303446";
+          };
+          foregroundColor = "#c6d0f5";
+          highlight = {
+            background = "#f2d5cf";
+            foreground = "#626880";
+          };
+          palette = [
+            "#51576d"
+            "#e78284"
+            "#a6d189"
+            "#e5c890"
+            "#8caaee"
+            "#f4b8e4"
+            "#81c8be"
+            "#a5adce"
+            "#626880"
+            "#e67172"
+            "#8ec772"
+            "#d9ba73"
+            "#7b9ef0"
+            "#f2a4db"
+            "#5abfb5"
+            "#b5bfe2"
+          ];
+        };
+        cursorBlinkMode = "system";
+        cursorShape = "block";
+        deleteBinding = "delete-sequence";
+        font = "MesloLGS Nerd Font Mono 16";
+        scrollOnOutput = true;
+        scrollbackLines = 10000;
+        showScrollbar = true;
+        transparencyPercent = 0;
+        visibleName = "Catppuccin Frappe";
+      };
       "95894cfd-82f7-430d-af6e-84d168bc34f5" = {
         allowBold = true;
         audibleBell = true;
@@ -283,6 +285,51 @@
         showScrollbar = true;
         transparencyPercent = 0;
         visibleName = "Catppuccin Mocha";
+      };
+      de8a9081-8352-4ce4-9519-5de655ad9361 = {
+        allowBold = true;
+        audibleBell = true;
+        backspaceBinding = "ascii-delete";
+        boldIsBright = false;
+        colors = {
+          backgroundColor = "#eff1f5";
+          cursor = {
+            background = "#dc8a78";
+            foreground = "#eff1f5";
+          };
+          foregroundColor = "#4c4f69";
+          highlight = {
+            background = "#dc8a78";
+            foreground = "#4c4f69";
+          };
+          palette = [
+            "#5c5f77"
+            "#d20f39"
+            "#40a02b"
+            "#df8e1d"
+            "#1e66f5"
+            "#ea76cb"
+            "#179299"
+            "#acb0be"
+            "#6c6f85"
+            "#d20f39"
+            "#40a02b"
+            "#df8e1d"
+            "#1e66f5"
+            "#ea76cb"
+            "#179299"
+            "#bcc0cc"
+          ];
+        };
+        cursorBlinkMode = "system";
+        cursorShape = "block";
+        deleteBinding = "delete-sequence";
+        font = "MesloLGS Nerd Font Mono 16";
+        scrollOnOutput = true;
+        scrollbackLines = 10000;
+        showScrollbar = true;
+        transparencyPercent = 0;
+        visibleName = "Catppuccin Latte";
       };
     };
   };
