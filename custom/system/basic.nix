@@ -11,7 +11,7 @@
   users.users.${username} = {
     isNormalUser = true;
     description = "${fullname}";
-    extraGroups = [ "networkmanager" "wheel" "bluetooth" "libvirtd" "docker" "podman" ];
+    extraGroups = [ "networkmanager" "wheel" "bluetooth" "libvirtd" "kvm" "qemu-libvirtd" "docker" "podman" ];
   };
 
   # Enable automatic login for the user.

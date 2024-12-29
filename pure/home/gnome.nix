@@ -97,7 +97,6 @@
         };
         cursorBlinkMode = "system";
         cursorShape = "block";
-        customCommand = "export TERMINAL=gnome-terminal";
         deleteBinding = "delete-sequence";
         font = "MesloLGS Nerd Font Mono 16";
         scrollOnOutput = true;
@@ -144,7 +143,6 @@
         };
         cursorBlinkMode = "system";
         cursorShape = "block";
-        customCommand = "export TERMINAL=gnome-terminal";
         deleteBinding = "delete-sequence";
         font = "MesloLGS Nerd Font Mono 16";
         scrollOnOutput = true;
@@ -191,7 +189,6 @@
         };
         cursorBlinkMode = "system";
         cursorShape = "block";
-        customCommand = "export TERMINAL=gnome-terminal";
         deleteBinding = "delete-sequence";
         font = "MesloLGS Nerd Font Mono 16";
         scrollOnOutput = true;
@@ -237,7 +234,6 @@
         };
         cursorBlinkMode = "system";
         cursorShape = "block";
-        customCommand = "export TERMINAL=gnome-terminal";
         deleteBinding = "delete-sequence";
         font = "MesloLGS Nerd Font Mono 16";
         scrollOnOutput = true;
@@ -283,7 +279,6 @@
         };
         cursorBlinkMode = "system";
         cursorShape = "block";
-        customCommand = "export TERMINAL=gnome-terminal";
         deleteBinding = "delete-sequence";
         font = "MesloLGS Nerd Font Mono 16";
         scrollOnOutput = true;
@@ -329,7 +324,6 @@
         };
         cursorBlinkMode = "system";
         cursorShape = "block";
-        customCommand = "export TERMINAL=gnome-terminal";
         deleteBinding = "delete-sequence";
         font = "MesloLGS Nerd Font Mono 16";
         scrollOnOutput = true;
