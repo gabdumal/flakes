@@ -43,8 +43,10 @@
 
     "org/gnome/shell" = {
       disable-user-extensions = lib.mkDefault false;
-      enabled-extensions = with pkgs.gnomeExtensions; [
-      ];
+      enabled-extensions = lib.mkDefault (
+        with pkgs.gnomeExtensions; [
+        ]
+      );
       favorite-apps = lib.mkDefault [
         "firefox.desktop"
         "code.desktop"
