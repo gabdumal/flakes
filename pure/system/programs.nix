@@ -2,18 +2,32 @@
 {
 
   programs = {
-    git = {
-      enable = true;
-    };
-
+    ## Multimedia
     noisetorch = {
       enable = true;
     };
 
+    ## Programming
+    direnv = {
+      enable = true;
+      enableZshIntegration = true;
+      nix-direnv.enable = true;
+    };
+
+    git = {
+      enable = true;
+    };
+
+    ## Shell
     zsh = {
       enable = true;
       enableCompletion = true;
       syntaxHighlighting.enable = true;
+    };
+
+    ## System
+    neovim = {
+      enable = true;
     };
   };
 

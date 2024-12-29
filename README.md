@@ -226,5 +226,5 @@ nix-update-all
 You can clean the system of unused packages with the following command:
 
 ```bash
-nix-store --gc
+nix-collect-garbage -d
 ```

@@ -7,18 +7,8 @@
     eyedropper
     switcheroo
 
-    ### Extensions
-
-    ## Multimedia
-    ffmpeg
-    imagemagick
-
     ## Office
     libreoffice
-
-    ## Programming
-    vscode-fhs
-    zed-editor
 
     ## System
     adw-gtk3

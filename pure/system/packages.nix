@@ -20,12 +20,18 @@
 
   environment.systemPackages = with pkgs; [
     ## Multimedia
+    ffmpeg
+    imagemagick
     qbittorrent
 
     ## Nix
     appimage-run
     nil
     nixpkgs-fmt
+
+    ## Programming
+    vscode-fhs
+    zed-editor
 
     ## Shell
     fastfetch

@@ -2,6 +2,7 @@
 {
 
   dconf.settings = {
+
     "org/gnome/desktop/interface" = {
       color-scheme = lib.mkDefault "default";
       enable-hot-corners = lib.mkDefault false;
@@ -56,6 +57,7 @@
     "org/gnome/shell/app-switcher" = {
       current-workspace-only = lib.mkDefault true;
     };
+
   };
 
   programs.gnome-terminal = {
@@ -63,6 +65,7 @@
     showMenubar = lib.mkDefault false;
     themeVariant = lib.mkDefault "system";
     profile = {
+
       "3a45cd64-9b3f-4bd8-b00f-56fa19be9cce" = {
         allowBold = true;
         audibleBell = true;
@@ -98,13 +101,14 @@
         cursorBlinkMode = "system";
         cursorShape = "block";
         deleteBinding = "delete-sequence";
-        font = "MesloLGS Nerd Font Mono 16";
+        font = "MartianMono Nerd Font Mono 16";
         scrollOnOutput = true;
         scrollbackLines = 10000;
         showScrollbar = true;
         transparencyPercent = 0;
         visibleName = "Astrodark";
       };
+      
       "4ea33fe1-309b-4c8c-ae48-b348d71637d9" = {
         allowBold = true;
         audibleBell = true;
@@ -144,13 +148,14 @@
         cursorBlinkMode = "system";
         cursorShape = "block";
         deleteBinding = "delete-sequence";
-        font = "MesloLGS Nerd Font Mono 16";
+        font = "MartianMono Nerd Font Mono 16";
         scrollOnOutput = true;
         scrollbackLines = 10000;
         showScrollbar = true;
         transparencyPercent = 0;
         visibleName = "Kibble";
       };
+
       "5083e06b-024e-46be-9cd2-892b814f1fc8" = {
         allowBold = true;
         audibleBell = true;
@@ -190,13 +195,14 @@
         cursorBlinkMode = "system";
         cursorShape = "block";
         deleteBinding = "delete-sequence";
-        font = "MesloLGS Nerd Font Mono 16";
+        font = "MartianMono Nerd Font Mono 16";
         scrollOnOutput = true;
         scrollbackLines = 10000;
         showScrollbar = true;
         transparencyPercent = 0;
         visibleName = "Catppuccin Macchiato";
       };
+
       "71a9971e-e829-43a9-9b2f-4565c855d664" = {
         allowBold = true;
         audibleBell = true;
@@ -235,13 +241,14 @@
         cursorBlinkMode = "system";
         cursorShape = "block";
         deleteBinding = "delete-sequence";
-        font = "MesloLGS Nerd Font Mono 16";
+        font = "MartianMono Nerd Font Mono 16";
         scrollOnOutput = true;
         scrollbackLines = 10000;
         showScrollbar = true;
         transparencyPercent = 0;
         visibleName = "Catppuccin Frappe";
       };
+
       "95894cfd-82f7-430d-af6e-84d168bc34f5" = {
         allowBold = true;
         audibleBell = true;
@@ -280,13 +287,14 @@
         cursorBlinkMode = "system";
         cursorShape = "block";
         deleteBinding = "delete-sequence";
-        font = "MesloLGS Nerd Font Mono 16";
+        font = "MartianMono Nerd Font Mono 16";
         scrollOnOutput = true;
         scrollbackLines = 10000;
         showScrollbar = true;
         transparencyPercent = 0;
         visibleName = "Catppuccin Mocha";
       };
+
       de8a9081-8352-4ce4-9519-5de655ad9361 = {
         allowBold = true;
         audibleBell = true;
@@ -325,13 +333,14 @@
         cursorBlinkMode = "system";
         cursorShape = "block";
         deleteBinding = "delete-sequence";
-        font = "MesloLGS Nerd Font Mono 16";
+        font = "MartianMono Nerd Font Mono 16";
         scrollOnOutput = true;
         scrollbackLines = 10000;
         showScrollbar = true;
         transparencyPercent = 0;
         visibleName = "Catppuccin Latte";
       };
+
     };
   };
 
