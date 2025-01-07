@@ -156,6 +156,15 @@ In the next time, you can use this helper command instead:
 nix-switch nixos
 ```
 
+#### Flatpaks
+
+To enable flatpaks, run the following commands:
+
+```bash
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak update
+```
+
 ### Home Manager
 
 For the first time, you need to initialize home manager with:
