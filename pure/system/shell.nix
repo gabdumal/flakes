@@ -8,6 +8,11 @@ in
   environment.localBinInPath = lib.mkDefault true;
 
   programs = {
+    ## Shells
+    fish = {
+      enable = lib.mkDefault true;
+    };
+
     zsh = {
       enable = true;
       shellInit = ''
@@ -26,6 +31,7 @@ in
       };
     };
 
+    ## Tools
     fzf = {
       fuzzyCompletion = lib.mkDefault true;
       keybindings = lib.mkDefault true;
