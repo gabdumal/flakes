@@ -1,35 +1,14 @@
 { lib, ... }:
 let
-  zshConfig = builtins.readFile files/.zshrc;
+  nixHelperCommands = builtins.readFile files/nixHelperCommands.sh;
 in
 {
 
   programs = {
     zsh = {
-      enable = true;
-      defaultKeymap = lib.mkDefault "viins";
-
-      autosuggestion = {
-        enable = lib.mkDefault true;
-      };
-      syntaxHighlighting = {
-        enable = lib.mkDefault true;
-      };
-
-      oh-my-zsh = {
-        enable = lib.mkDefault true;
-        plugins = [ "git" ];
-      };
-
-      shellAliases = {
-        ## Zoxide
-        cd = lib.mkDefault "z";
-      };
-
+      enable = lib.mkDefault true;
       initExtra = ''
-        ### Pure Home Extra definitions
-        ${zshConfig}
-        ### END Pure Home Extra definitions
+        ${nixHelperCommands}
       '';
     };
 
