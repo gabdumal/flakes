@@ -125,9 +125,7 @@
     },
     "pure": {
       "inputs": {
-        "ghostty": [
-          "ghostty"
-        ],
+        "ghostty": "ghostty",
         "home-manager": [
           "home-manager"
         ],
@@ -137,11 +135,11 @@
       },
       "locked": {
         "dir": "pure",
-        "lastModified": 1736414234,
-        "narHash": "sha256-OeSpKd2qKUH8KqCtvgz0NYOlWX33rnKqmUIB/nA+m/E=",
+        "lastModified": 1736415282,
+        "narHash": "sha256-QHdFi/5NRaBJ9AR2/PpE1+anLoS5l/kGhP4ySvk1AFs=",
         "owner": "gabdumal",
         "repo": "flakes",
-        "rev": "470b5099c06cf585613bff2aac12413775afae46",
+        "rev": "784e81afd5f4ac7940dac6a60063df69c18923c1",
         "type": "github"
       },
       "original": {
@@ -153,7 +151,6 @@
     },
     "root": {
       "inputs": {
-        "ghostty": "ghostty",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
         "pure": "pure"
@@ -177,10 +174,12 @@
     "zig": {
       "inputs": {
         "flake-compat": [
+          "pure",
           "ghostty"
         ],
         "flake-utils": "flake-utils",
         "nixpkgs": [
+          "pure",
           "ghostty",
           "nixpkgs-stable"
         ]
