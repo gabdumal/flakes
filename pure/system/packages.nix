@@ -3,6 +3,7 @@
 
   environment.gnome.excludePackages = with pkgs; [
     gnome-connections
+    gnome-console
     gnome-tour
   ];
 
@@ -18,6 +19,9 @@
   ];
 
   environment.systemPackages = with pkgs; [
+    ## GNOME
+    nautilus-python
+
     ## Multimedia
     ffmpeg
     imagemagick
@@ -44,6 +48,7 @@
     bluez # Bluetooth
     bluez-tools # Bluetooth tools
     curl # HTTP client
+    ghostty # Terminal emulator
     menulibre # Menu editor
     usbutils # USB tools
     wget # HTTP client

@@ -33,6 +33,11 @@
     };
 
     ## System
+    nautilus-open-any-terminal = {
+      enable = lib.mkDefault true;
+      terminal = lib.mkDefault "ghostty";
+    };
+
     neovim = {
       enable = lib.mkDefault true;
     };

@@ -6,13 +6,13 @@
 
   imports = [
     ./display.nix
+    ./environment.nix
     ./locales.nix
     ./machine.nix
     ./networking.nix
     ./packages.nix
     ./programs.nix
     ./services.nix
-    ./variables.nix
   ];
 
   system.stateVersion = "24.11";

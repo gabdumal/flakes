@@ -33,7 +33,7 @@
       "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
         name = "Terminal";
         binding = "<Ctrl><Alt>t";
-        command = "kgx";
+        command = "ghostty";
       };
 
       "org/gnome/shell" = {
