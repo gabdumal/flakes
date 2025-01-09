@@ -30,15 +30,15 @@
       ];
     };
 
-    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
-      name = lib.mkDefault "Terminal";
-      command = lib.mkDefault "kgx";
-      binding = lib.mkDefault "<Ctrl><Alt>t";
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = lib.mkDefault {
+      name = "System Monitor";
+      command = "gnome-system-monitor";
+      binding = "<Ctrl><Shift>Escape";
     };
-    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
-      name = lib.mkDefault "System Monitor";
-      command = lib.mkDefault "gnome-system-monitor";
-      binding = lib.mkDefault "<Ctrl><Shift>Escape";
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = lib.mkDefault {
+      name = "Terminal";
+      command = "kgx";
+      binding = "<Ctrl><Alt>t";
     };
 
     "org/gnome/settings-daemon/plugins/power" = {
