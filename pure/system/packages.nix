@@ -18,9 +18,6 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    ## GNOME
-    dconf-editor
-
     ## Multimedia
     ffmpeg
     imagemagick

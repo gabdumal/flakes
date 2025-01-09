@@ -3,7 +3,6 @@
 
   dconf.settings = {
     "org/gnome/Console" = {
-      custom-font = lib.mkDefault "'MesloLGL Nerd Font Mono 12'";
       theme = lib.mkDefault "auto";
     };
 
@@ -11,6 +10,7 @@
       color-scheme = lib.mkDefault "default";
       enable-hot-corners = lib.mkDefault false;
       gtk-theme = lib.mkDefault "adw-gtk3";
+      monospace-font-name = lib.mkDefault "'MesloLGL Nerd Font Mono 12'";
     };
 
     "org/gnome/desktop/session" = {
@@ -61,6 +61,10 @@
 
     "org/gnome/shell/app-switcher" = {
       current-workspace-only = lib.mkDefault true;
+    };
+
+    "/org/gnome/tweaks" = {
+      show-extensions-notice = lib.mkDefault false;
     };
   };
 

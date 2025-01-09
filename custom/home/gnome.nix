@@ -21,14 +21,13 @@
       "org/gnome/shell" = {
         disable-user-extensions = lib.mkDefault false;
         enabled-extensions = with pkgs.gnomeExtensions; [
-
         ];
         favorite-apps = lib.mkDefault [
           "firefox.desktop"
           "code.desktop"
           "org.gnome.Nautilus.desktop"
         ];
-        # last-selected-power-profile = lib.mkDefault "performance";
+        last-selected-power-profile = lib.mkDefault "performance";
       };
     };
   };
