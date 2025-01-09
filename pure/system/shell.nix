@@ -13,6 +13,17 @@ in
       shellInit = ''
         ${nixHelperCommands}
       '';
+      autosuggestions = {
+        enable = lib.mkDefault true;
+      };
+      syntaxHighlighting = {
+        enable = lib.mkDefault true;
+      };
+      ohMyZsh = {
+        enable = lib.mkDefault true;
+        plugins = [ "git" ];
+        theme = "robbyrussell";
+      };
     };
 
     fzf = {
