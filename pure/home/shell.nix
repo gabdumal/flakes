@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }:
+{ lib, ... }:
 {
 
   programs = {
@@ -12,6 +12,7 @@
       interactiveShellInit = ''
         set fish_greeting # Disable greeting
         thefuck --alias | source
+        direnv hook fish | source
       '';
       plugins = [
       ];
@@ -21,7 +22,6 @@
     ## Themes
     starship = {
       enable = true;
-      settings = { };
     };
 
     ## Tools
