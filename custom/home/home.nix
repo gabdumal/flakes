@@ -6,6 +6,7 @@
 
   imports = [
     ./gnome/nix
+    ./shell.nix
   ];
 
 }

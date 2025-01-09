@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ lib, pkgs, ... }:
 {
 
   programs = {
@@ -9,6 +9,13 @@
 
     fish = {
       enable = lib.mkDefault true;
+      interactiveShellInit = ''
+        set fish_greeting # Disable greeting
+        thefuck --alias | source
+      '';
+      plugins = [
+        { name = "grc"; src = pkgs.fishPlugins.grc.src; }
+      ];
     };
 
     ## Tools
