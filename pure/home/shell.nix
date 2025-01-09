@@ -14,8 +14,8 @@
         thefuck --alias | source
       '';
       plugins = [
-        { name = "grc"; src = pkgs.fishPlugins.grc.src; }
       ];
+      functions = { };
     };
 
     ## Tools

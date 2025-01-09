@@ -30,15 +30,23 @@ nix-switch() {
 }
 
 develop() {
-    case $1 in
-        c_cpp|java|latex|python|rust|typescript|typst)
+    files=()
+    while IFS= read -r file; do
+        files+=("$file")
+    done < <(ls ~/.dotfiles/nixos/environments/ | grep -v -e 'README.md' -e 'update.sh')
+
+    match_found=false
+    for file in "${files[@]}"; do
+        if [ "$1" = "$file" ]; then
             nix develop ~/.dotfiles/nixos/environments/$1
-            ;;
-        *)
-            echo "Unknown environment: $1. Available: c_cpp, java, latex, python, rust, typescript, typst."
-            exit 1
-            ;;
-    esac
+            match_found=true
+            break
+        fi
+    done
+
+    if [ "$match_found" = false ]; then
+        echo "Unknown environment: $1. Available: $(IFS=, ; echo "${files[*]}")."
+    fi
 }
 
 nix-update-all() {
