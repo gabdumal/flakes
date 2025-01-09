@@ -18,6 +18,12 @@
       functions = { };
     };
 
+    ## Themes
+    starship = {
+      enable = true;
+      settings = { };
+    };
+
     ## Tools
     zoxide = {
       enable = true;
