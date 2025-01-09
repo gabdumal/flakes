@@ -1,33 +1,47 @@
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
 {
 
   programs = {
     ## Multimedia
     noisetorch = {
-      enable = true;
+      enable = lib.mkDefault true;
     };
 
     ## Programming
     direnv = {
       enable = true;
-      enableZshIntegration = true;
-      nix-direnv.enable = true;
     };
 
     git = {
       enable = true;
     };
 
+    gnome-terminal = {
+      enable = lib.mkDefault true;
+    };
+
     ## Shell
+    thefuck = {
+      enable = lib.mkDefault true;
+    };
+
     zsh = {
-      enable = true;
-      enableCompletion = true;
-      syntaxHighlighting.enable = true;
+      enable = lib.mkDefault true;
+      enableCompletion = lib.mkDefault true;
+      syntaxHighlighting.enable = lib.mkDefault true;
     };
 
     ## System
     neovim = {
+      enable = lib.mkDefault true;
+    };
+
+    nix-ld = {
       enable = true;
+      libraries = with pkgs; [
+        stdenv.cc.cc
+        openssl
+      ];
     };
   };
 
@@ -42,4 +56,3 @@
   };
 
 }
-

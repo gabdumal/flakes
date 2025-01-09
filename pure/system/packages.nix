@@ -18,7 +18,7 @@
     raleway
   ];
 
-  environment.defaultPackages = with pkgs; [
+  environment.systemPackages = with pkgs; [
     ## GNOME
     dconf-editor
 
@@ -42,14 +42,12 @@
     ## Shell
     fastfetch
     fzf
-    thefuck
 
     ## System
     adw-gtk3 # Port GTK3 apps to libadwaita
     bluez # Bluetooth
     bluez-tools # Bluetooth tools
     curl # HTTP client
-    gnome-terminal # Terminal emulator
     menulibre # Menu editor
     nix-ld # Nix dynamic linker
     usbutils # USB tools

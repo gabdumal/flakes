@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
 {
 
   nixpkgs.config.allowUnfree = true;
@@ -18,35 +18,37 @@
   system.stateVersion = "24.11";
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  users.defaultUserShell = pkgs.zsh;
+  ## CUPS, to print documents
+  services.printing.enable = lib.mkDefault false;
 
-  ## Privileges
-  security.polkit.enable = true;
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
+  ## OpenSSH daemon
+  services.openssh.enable = lib.mkDefault true;
 
   ## Pipewire
-  services.pulseaudio.enable = false;
-  security.rtkit.enable = true;
+  services.pulseaudio.enable = lib.mkDefault false;
+  security.rtkit.enable = lib.mkDefault true;
   services.pipewire = {
-    enable = true;
+    enable = lib.mkDefault true;
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
 
-    ## If you want to use JACK applications, uncomment this.
+    ### If you want to use JACK applications, uncomment this.
     #jack.enable = true;
 
-    ## Use the example session manager (no others are packaged yet so this is enabled by default, no need to redefine it in your config for now).
+    ### Use the example session manager (no others are packaged yet so this is enabled by default, no need to redefine it in your config for now).
     #media-session.enable = true;
   };
+
+  ## Privileges
+  security.polkit.enable = true;
 
   ## Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229.
   systemd.services."getty@tty1".enable = false;
   systemd.services."autovt@tty1".enable = false;
 
-  ## Enable the OpenSSH daemon.
-  services.openssh.enable = true;
+  ## Shell
+  users.defaultUserShell = lib.mkDefault pkgs.zsh;
+  environment.localBinInPath = lib.mkDefault true;
 
 }
