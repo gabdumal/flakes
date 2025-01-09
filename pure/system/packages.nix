@@ -18,7 +18,7 @@
     raleway
   ];
 
-  environment.systemPackages = with pkgs; [
+  environment.defaultPackages = with pkgs; [
     ## GNOME
     dconf-editor
 
@@ -32,6 +32,9 @@
     nil
     nixpkgs-fmt
 
+    ## Office
+    libreoffice
+
     ## Programming
     vscode-fhs
     zed-editor
@@ -39,23 +42,18 @@
     ## Shell
     fastfetch
     fzf
-    gnome-terminal
     thefuck
 
     ## System
-    bluez
-    bluez-tools
-    curl
-    nix-ld
-    usbutils
-    wget
-
-    ## Office
-    libreoffice
-
-    ## System
-    adw-gtk3
-    menulibre
+    adw-gtk3 # Port GTK3 apps to libadwaita
+    bluez # Bluetooth
+    bluez-tools # Bluetooth tools
+    curl # HTTP client
+    gnome-terminal # Terminal emulator
+    menulibre # Menu editor
+    nix-ld # Nix dynamic linker
+    usbutils # USB tools
+    wget # HTTP client
 
     ## Web
     (pkgs.wrapFirefox
