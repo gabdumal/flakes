@@ -23,24 +23,6 @@
       workspaces-only-on-primary = lib.mkDefault true;
     };
 
-    # "org/gnome/settings-daemon/plugins/media-keys" = {
-    #   custom-keybindings = lib.mkDefault [
-    #     "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
-    #     "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
-    #   ];
-    # };
-
-    # "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = lib.mkDefault {
-    #   name = "System Monitor";
-    #   binding = "<Ctrl><Shift>Escape";
-    #   command = "gnome-system-monitor";
-    # };
-    # "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = lib.mkDefault {
-    #   name = "Terminal";
-    #   binding = "<Ctrl><Alt>t";
-    #   command = "kgx";
-    # };
-
     "org/gnome/settings-daemon/plugins/power" = {
       sleep-inactive-ac-type = lib.mkDefault "blank";
     };

@@ -18,6 +18,24 @@
         workspaces-only-on-primary = lib.mkDefault true;
       };
 
+      "org/gnome/settings-daemon/plugins/media-keys" = {
+        custom-keybindings = [
+          "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
+          "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
+        ];
+      };
+
+      "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
+        name = "System Monitor";
+        binding = "<Ctrl><Shift>Escape";
+        command = "gnome-system-monitor";
+      };
+      "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
+        name = "Terminal";
+        binding = "<Ctrl><Alt>t";
+        command = "kgx";
+      };
+
       "org/gnome/shell" = {
         disable-user-extensions = lib.mkDefault false;
         enabled-extensions = with pkgs.gnomeExtensions; [
