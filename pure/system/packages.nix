@@ -3,7 +3,6 @@
 
   environment.gnome.excludePackages = with pkgs; [
     gnome-connections
-    gnome-console
     gnome-tour
   ];
 

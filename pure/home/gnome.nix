@@ -28,7 +28,7 @@
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
       name = lib.mkDefault "Terminal";
-      command = lib.mkDefault "gnome-terminal";
+      command = lib.mkDefault "kgx";
       binding = lib.mkDefault "<Ctrl><Alt>t";
     };
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {

@@ -34,7 +34,7 @@
 
     ## System
     gnome-terminal = {
-      enable = lib.mkDefault true;
+      enable = lib.mkDefault false;
     };
 
     neovim = {

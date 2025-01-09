@@ -34,7 +34,7 @@
   };
 
   programs.gnome-terminal = {
-    enable = lib.mkDefault true;
+    enable = lib.mkDefault false;
     profile = {
       ## Astrodark
       "3a45cd64-9b3f-4bd8-b00f-56fa19be9cce" = {
