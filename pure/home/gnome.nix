@@ -2,6 +2,10 @@
 {
 
   dconf.settings = {
+    "org/gnome/Console" = {
+      custom-font = lib.mkDefault "'MesloLGL Nerd Font Mono 12'";
+      theme = lib.mkDefault "auto";
+    };
 
     "org/gnome/desktop/interface" = {
       color-scheme = lib.mkDefault "default";
@@ -58,7 +62,6 @@
     "org/gnome/shell/app-switcher" = {
       current-workspace-only = lib.mkDefault true;
     };
-
   };
 
 }
