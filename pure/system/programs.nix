@@ -17,6 +17,11 @@
     };
 
     ## Shell
+    fzf = {
+      fuzzyCompletion = lib.mkDefault true;
+      keybindings = lib.mkDefault true;
+    };
+
     thefuck = {
       enable = lib.mkDefault true;
     };

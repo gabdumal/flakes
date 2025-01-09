@@ -56,12 +56,3 @@ if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
     eval "$(oh-my-posh init zsh)"
 fi
 eval "$(oh-my-posh init zsh --config ~/.dotfiles/omp.json)"
-
-### fzf
-if [ -n "${commands[fzf-share]}" ]; then
-  source "$(fzf-share)/key-bindings.zsh"
-  source "$(fzf-share)/completion.zsh"
-fi
-
-### Fuck
-eval $(thefuck --alias)

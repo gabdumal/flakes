@@ -66,7 +66,6 @@
     showMenubar = lib.mkDefault false;
     themeVariant = lib.mkDefault "system";
     profile = {
-
       "3a45cd64-9b3f-4bd8-b00f-56fa19be9cce" = {
         allowBold = lib.mkDefault true;
         audibleBell = lib.mkDefault true;
@@ -341,7 +340,6 @@
         transparencyPercent = lib.mkDefault 0;
         visibleName = lib.mkDefault "Catppuccin Latte";
       };
-
     };
   };
 

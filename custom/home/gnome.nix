@@ -4,7 +4,6 @@
   dconf = {
     enable = true;
     settings = {
-
       "org/gnome/desktop/interface" = {
         color-scheme = lib.mkDefault "default";
       };
@@ -31,11 +30,11 @@
         ];
         # last-selected-power-profile = lib.mkDefault "performance";
       };
-
     };
   };
 
   programs.gnome-terminal = {
+    enable = lib.mkDefault true;
     profile = {
       ## Astrodark
       "3a45cd64-9b3f-4bd8-b00f-56fa19be9cce" = {
