@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }:
+{ lib, ... }:
 {
 
   nixpkgs.config.allowUnfree = true;
@@ -13,6 +13,7 @@
     ./packages.nix
     ./programs.nix
     ./services.nix
+    ./shell.nix
   ];
 
   system.stateVersion = "24.11";
@@ -46,9 +47,5 @@
   ## Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229.
   systemd.services."getty@tty1".enable = false;
   systemd.services."autovt@tty1".enable = false;
-
-  ## Shell
-  users.defaultUserShell = lib.mkDefault pkgs.zsh;
-  environment.localBinInPath = lib.mkDefault true;
 
 }

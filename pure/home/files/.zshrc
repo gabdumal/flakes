@@ -52,7 +52,3 @@ export PATH="$HOME/.cargo/bin:$PATH"
 ## Shell
 
 ### Theme
-if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-    eval "$(oh-my-posh init zsh)"
-fi
-eval "$(oh-my-posh init zsh --config ~/.dotfiles/omp.json)"
