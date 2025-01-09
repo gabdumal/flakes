@@ -9,10 +9,6 @@ in
 
   programs = {
     ## Shells
-    fish = {
-      enable = lib.mkDefault true;
-    };
-
     zsh = {
       enable = true;
       shellInit = ''
