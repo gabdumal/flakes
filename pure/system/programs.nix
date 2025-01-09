@@ -16,10 +16,6 @@
       enable = true;
     };
 
-    gnome-terminal = {
-      enable = lib.mkDefault true;
-    };
-
     ## Shell
     thefuck = {
       enable = lib.mkDefault true;
@@ -32,6 +28,10 @@
     };
 
     ## System
+    gnome-terminal = {
+      enable = lib.mkDefault true;
+    };
+
     neovim = {
       enable = lib.mkDefault true;
     };

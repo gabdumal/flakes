@@ -49,7 +49,6 @@
     bluez-tools # Bluetooth tools
     curl # HTTP client
     menulibre # Menu editor
-    nix-ld # Nix dynamic linker
     usbutils # USB tools
     wget # HTTP client
 
