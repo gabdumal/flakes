@@ -6,18 +6,35 @@ in
 
   programs = {
     zsh = {
+      enable = true;
       defaultKeymap = lib.mkDefault "viins";
-      enableVteIntegration = lib.mkDefault true;
+
+      autosuggestion = {
+        enable = lib.mkDefault true;
+      };
+      syntaxHighlighting = {
+        enable = lib.mkDefault true;
+      };
+
+      oh-my-zsh = {
+        enable = lib.mkDefault true;
+        plugins = [ "git" ];
+      };
+
+      shellAliases = {
+        ## Zoxide
+        cd = lib.mkDefault "z";
+      };
+
       initExtra = ''
-        ### Pure Home InitExtra definitions
+        ### Pure Home Extra definitions
         ${zshConfig}
-        ### END Pure Home InitExtra definitions
+        ### END Pure Home Extra definitions
       '';
     };
 
     zoxide = {
       enable = true;
-      enableZshIntegration = true;
     };
   };
 

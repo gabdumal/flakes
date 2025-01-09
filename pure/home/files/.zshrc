@@ -44,11 +44,3 @@ develop() {
 nix-update-all() {
     $HOME/.dotfiles/nixos/custom/update.sh
 }
-
-## Programs
-### Rust
-export PATH="$HOME/.cargo/bin:$PATH"
-
-## Shell
-
-### Theme

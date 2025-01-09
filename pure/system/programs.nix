@@ -28,8 +28,6 @@
 
     zsh = {
       enable = lib.mkDefault true;
-      enableCompletion = lib.mkDefault true;
-      syntaxHighlighting.enable = lib.mkDefault true;
     };
 
     ## System
