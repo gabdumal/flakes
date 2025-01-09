@@ -10,7 +10,7 @@
       color-scheme = lib.mkDefault "default";
       enable-hot-corners = lib.mkDefault false;
       gtk-theme = lib.mkDefault "adw-gtk3";
-      monospace-font-name = lib.mkDefault "'MesloLGL Nerd Font Mono 12'";
+      monospace-font-name = lib.mkDefault "MesloLGL Nerd Font Mono 12";
     };
 
     "org/gnome/desktop/session" = {

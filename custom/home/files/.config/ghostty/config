@@ -1,1 +1,5 @@
- command = fish
+command = fish
+shell-integration = fish
+theme = catppuccin-mocha
+font-family = MesloLGL Nerd Font Mono
+font-size = 14

@@ -10,14 +10,18 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    ghostty = {
+      url = "github:ghostty-org/ghostty";
+    };
     pure = {
       url = "github:gabdumal/flakes?dir=pure";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
+      inputs.ghostty.follows = "ghostty";
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, pure, ... } @ inputs:
+  outputs = { self, nixpkgs, home-manager, pure, ghostty, ... } @ inputs:
     let
       system = "x86_64-linux";
       fullname = "[ Full Name ]";
@@ -33,6 +37,7 @@
           specialArgs = {
             inherit inputs;
             inherit system;
+            inherit ghostty;
             inherit fullname;
             inherit username;
             inherit hostname;

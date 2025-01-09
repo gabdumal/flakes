@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ghostty, pkgs, ... }:
 {
 
   environment.gnome.excludePackages = with pkgs; [
@@ -48,7 +48,6 @@
     bluez # Bluetooth
     bluez-tools # Bluetooth tools
     curl # HTTP client
-    ghostty # Terminal emulator
     menulibre # Menu editor
     usbutils # USB tools
     wget # HTTP client
@@ -59,6 +58,8 @@
         pipewireSupport = true;
       })
       { })
+  ] ++ [
+    ghostty.packages.${pkgs.system}.default
   ];
 
 }
