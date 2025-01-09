@@ -16,20 +16,6 @@
       enable = true;
     };
 
-    ## Shell
-    fzf = {
-      fuzzyCompletion = lib.mkDefault true;
-      keybindings = lib.mkDefault true;
-    };
-
-    thefuck = {
-      enable = lib.mkDefault true;
-    };
-
-    zsh = {
-      enable = lib.mkDefault true;
-    };
-
     ## System
     nautilus-open-any-terminal = {
       enable = lib.mkDefault true;
