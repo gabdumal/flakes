@@ -27,6 +27,15 @@ in
       };
     };
 
+    fish = {
+      enable = lib.mkDefault true;
+      interactiveShellInit = ''
+        set fish_greeting # Disable greeting
+        thefuck --alias | source
+        direnv hook fish | source
+      '';
+    };
+
     ## Tools
     fzf = {
       fuzzyCompletion = lib.mkDefault true;
