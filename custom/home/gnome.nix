@@ -45,7 +45,7 @@
           "code.desktop"
           "org.gnome.Nautilus.desktop"
         ];
-        last-selected-power-profile = lib.mkForce "performance";
+        # last-selected-power-profile = lib.mkForce "performance";
       };
     };
   };
