@@ -29,10 +29,12 @@ in
 
     fish = {
       enable = lib.mkDefault true;
-      interactiveShellInit = ''
+      shellInit = ''
         set fish_greeting # Disable greeting
-        thefuck --alias | source
-        direnv hook fish | source
+        direnv hook fish | source # Enable direnv
+      '';
+      interactiveShellInit = ''
+        thefuck --alias | source # Enable thefuck
       '';
     };
 
