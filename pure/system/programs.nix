@@ -32,10 +32,8 @@
     };
 
     nix-ld = {
-      enable = true;
+      enable = lib.mkDefault false;
       libraries = with pkgs; [
-        stdenv.cc.cc
-        openssl
       ];
     };
   };
