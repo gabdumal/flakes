@@ -21,9 +21,6 @@
     nil
     nixpkgs-fmt
 
-    ## Office
-    libreoffice
-
     ## Programming
     vscode-fhs
     zed-editor
