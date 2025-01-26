@@ -11,10 +11,6 @@
 
   fonts.packages = with pkgs; [
     montserrat
-    nerd-fonts.fira-code
-    nerd-fonts.meslo-lg
-    nerd-fonts.martian-mono
-    nerd-fonts.space-mono
     raleway
   ];
 
