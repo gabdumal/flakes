@@ -5,12 +5,8 @@
 
   home.packages = with pkgs; [
     ## Fonts
-    (nerdfonts.override {
-      fonts = [
-        "FiraCode"
-        "MesloLG"
-      ];
-    })
+    nerd-fonts.fira-code
+    nerd-fonts.meslo-lg
   ];
 
 }
