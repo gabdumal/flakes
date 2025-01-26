@@ -16,12 +16,6 @@
       };
     };
 
-    ## System
-    nautilus-open-any-terminal = {
-      enable = lib.mkDefault true;
-      terminal = lib.mkDefault "ghostty";
-    };
-
     nix-ld = {
       enable = lib.mkDefault false;
       libraries = with pkgs; [
