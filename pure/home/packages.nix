@@ -37,8 +37,9 @@
     bluez # Bluetooth
     bluez-tools # Bluetooth tools
     curl # HTTP client
-    ghostty # Terminal emulator
+    direnv # Environment switcher
     menulibre # Menu editor
+    neovim # Text editor
     usbutils # USB tools
     wget # HTTP client
 
