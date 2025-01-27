@@ -8,22 +8,13 @@
     nerd-fonts.fira-code
     nerd-fonts.meslo-lg
 
-    ## GNOME
-    nautilus-python
-
     ## Multimedia
     ffmpeg
-    imagemagick
-    qbittorrent
 
     ## Nix
     appimage-run
     nil
     nixpkgs-fmt
-
-    ## Programming
-    vscode-fhs
-    zed-editor
 
     ## Shell
     fastfetch
@@ -39,13 +30,6 @@
     neovim # Text editor
     usbutils # USB tools
     wget # HTTP client
-
-    ## Web
-    (pkgs.wrapFirefox
-      (pkgs.firefox-unwrapped.override {
-        pipewireSupport = true;
-      })
-      { })
   ];
 
 }
